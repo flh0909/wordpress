@@ -1,0 +1,287 @@
+/*
+Theme Name: MFBegin cms
+*/
+
+/** 图片模块 **/
+.picture-h {
+	background: #fff;
+	margin: 0 0 10px 0;
+	padding: 0px;
+	border: 1px solid #ebebeb;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+}
+.picture-h-img {
+	max-width: 100%;
+ 	width: auto;
+	height: auto;
+    overflow: hidden;
+	transition-duration: .3s;
+}
+.picture-h-img a img, .tao-h-img a img {
+	float: left;
+	max-width: 100%;
+ 	width: auto;
+	height: auto;
+}
+.picture-h-title, .flexisel-h-title {
+	text-align: center;
+	line-height: 30px;
+	margin: 0 10px 5px 10px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.line-four, .line-tao {
+	margin: 0 -5px;
+}
+.line-four .xl4, .line-tao .xl4 {
+	position: relative;
+	min-height: 1px;
+	padding: 0 5px;
+}
+@media screen and (min-width:999px) {
+	.picture-h-img {
+		height: 135px;
+		overflow: hidden;
+	}
+}
+.xm4 {
+	position: relative;
+	min-height: 1px;
+}
+/** 单栏分类列表 **/
+.line-one .cat-site {
+	margin: 10px 0 0 0;
+}
+.cat-one-list li {
+	line-height: 210%;
+	margin: 0 40px 0 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.line-one-thumbnail {
+	float: left;
+	width: 200px;
+	height: 150px;
+	margin: 0 15px 0 0;
+    overflow: hidden;
+	transition-duration: .3s;
+}
+.line-one-thumbnail a img {
+	width: 200px;
+	height: 150px;
+}
+@media screen and (max-width: 550px) {
+	.line-one-thumbnail {
+		float: inherit;
+		width: 270px;
+		height: 100px;
+		margin: 0 auto 5px;
+		overflow: hidden;
+	}
+	.line-one-thumbnail a img {
+		width: 280px;
+		height: 210px;
+	}
+}
+/** 两栏分类列表 **/
+.cat-box {
+	position: relative;
+	background: #fff;
+	margin: 0 0 10px 0;
+	border: 1px solid #ebebeb;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+}
+.cat-box .cat-title {
+	float: left;
+	width: 100%;
+    height: 40px;
+    line-height: 40px;
+	border-bottom: 1px solid #ebebeb;
+}
+.cat-box .cat-title a {
+	margin: 0 0 0 15px;
+}
+@media screen and (max-width: 900px) {
+	.cat-box .cat-title a {
+		float: right;
+		margin: 0 15px 0 15px;
+	}
+}
+.icon-cat {
+	float: left;
+	font-size: 16px;
+	color: #C01E22;
+	width: 40px;
+    height: 40px;
+	line-height: 40px;
+	padding: 1px 0;
+	text-align: center;
+	border-right: 1px solid #ebebeb;
+}
+.icon-m {
+	font-size: 16px;
+	color: #999;
+	margin: 0 0 0 3px;
+	vertical-align: middle;
+}
+.cat-site {
+	padding: 5px 20px 20px 20px;
+}
+.cat-site h2 {
+	font-size: 16px;
+    line-height: 30px;
+	margin: 0 0 5px 0;
+	width: 90%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.line-small .thumbnail {
+	width: 133px;
+	height: 100px;
+}
+.line-small .thumbnail a img {
+	width: 133px;
+	height: 100px;
+}
+.cat-main {
+	color: #777;
+	margin: 0 0 5px 0;
+}
+.line-small .cat-main {
+	height: 100px;
+	overflow: hidden;
+}
+.cat-list li {
+	width: 80%;
+	line-height: 210%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.icon-li {
+	font-size: 16px;
+	color: #999;
+	vertical-align: middle;
+}
+.list-date {
+	float: right;
+	color: #999;
+}
+.line-small {
+	margin: 0 -5px;
+}
+.line-small .xl2 {
+	position: relative;
+	min-height: 1px;
+	padding: 0 5px;
+}
+.xm2 {
+	position: relative;
+	min-height: 1px;
+}
+/** 列表大 **/
+.line-big .thumbnail {
+	width: 180px;
+	height: 130px;
+}
+.line-big .thumbnail a img {
+	width: 180px;
+	height: 130px;
+}
+.line-big .cat-main {
+	height: 130px;
+	overflow: hidden;
+}
+.line-big {
+	margin: 0 -5px;
+}
+.line-big .xl3 {
+	position: relative;
+	min-height: 1px;
+	padding: 0 5px;
+}
+@media screen and (min-width:300px) {
+	.xl2 {
+		float: left;
+		width: 50%;
+	}
+	.xl3 {
+		float: left;
+		width: 50%;
+	}
+}
+@media screen and (min-width:320px) {
+	.xl4 {
+		float: left;
+		width: 50%;
+	}
+}
+@media screen and (min-width:1080px) {
+	.xm4 {
+		float: left;
+		width: 25%;
+	}
+	.xm2 {
+		float: left;
+		width: 50%;
+	}
+	.xm3 {
+		float: left;
+		width: 50%;
+	}
+}
+@media screen and (max-width:1080px) {
+	.xm4 {
+		width: 25%;
+	}
+}
+@media screen and (max-width: 480px) {
+	.line-four {
+		margin: 0 -4px;
+	}
+	.line-tao {
+		margin: 0 -3px;
+	}
+	.xl2 {
+		width: 100%;
+	}
+	.line-small {
+		margin: 0 -4px;
+	}
+	.xl3 {
+		width: 100%;
+	}
+	.line-big {
+		margin: 0 -3px;
+	}
+	.xm4 {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 700px) {
+	.xl2 {
+		width: 100%;
+	}
+	.xl3 {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 620px) {
+	.cat-box .thumbnail{
+		width: 100px;
+		height: 75px;
+	}
+	.cat-box .thumbnail a img {
+		width: 100px;
+		height: 75px;
+	} 
+	.cat-box .cat-main {
+		height: 75px;
+		overflow: hidden;
+	}
+}
