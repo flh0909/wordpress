@@ -87,7 +87,7 @@
     <span class="header-logo pull-left"></span>
     <div class="header-name pull-left">
         <h1><a href="<?php echo get_bloginfo('url')?>" title="<?php echo get_bloginfo('name') . '-' . get_bloginfo('description')?>"><?php echo get_bloginfo('name')?></a></h1>
-        <p><span>Japan's Fashion</span> —— <span><?php echo get_bloginfo('description')?>&nbsp;&nbsp;<a href="<?php echo get_bloginfo('url')?>"><?php echo get_bloginfo('url')?></a></span></p>
+        <p><span><?php echo get_bloginfo('description')?>&nbsp;&nbsp;<a href="<?php echo get_bloginfo('url')?>"><?php echo get_bloginfo('url')?></a></span></p>
     </div>
     <div class="menu pull-right">
         <form method="get" class="dropdown search-form" action="<?php echo esc_url(home_url('/')); ?>">
