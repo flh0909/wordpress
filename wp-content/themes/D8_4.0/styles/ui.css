@@ -51,7 +51,7 @@
 .excerpt{background-color:#fff;padding:20px 20px 20px 256px;margin-bottom:1px;position:relative;border-left:solid 4px #fff;*zoom:1}
 .excerpt:before,.excerpt:after{display:table;content:"";line-height:0}
 .excerpt:after{clear:both}
-.excerpt:hover{border-left-color:#428bca;padding-left:260px;margin-left:-4px;background-color:#F8FCFE}
+.excerpt:hover{border-left-color:#FF7E69;padding-left:260px;margin-left:-4px;background-color:#FFF3F3}
 .excerpt-nothumbnail{padding-left: 20px;}
 .excerpt-nothumbnail:hover{padding-left: 24px;}
 .excerpt header{margin:0 0 15px 0;height:25px; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
@@ -68,6 +68,8 @@
 .excerpt header .label{margin-right:5px;position:relative;top:-2px}
 
 .excerpt h2{display:inline;font-size:20px;margin:0;font-weight:normal;position:relative;top:1px;line-height:25px}
+.excerpt h2 a{color:#FF7E69}
+.excerpt h2 a:hover{color:#DC643C}
 .excerpt h2 strong{color:#8CAC52;margin-right:10px}
 .excerpt .note{color:#777;font-size: 14px;line-height: 24px;}
 .excerpt .itag a{border-style:solid;border-width:1px;border-color:#e2e2e2 #ddd #ddd #e2e2e2;display:inline-block;margin-right:3px;border-radius:1px;padding:0 5px;line-height:18px}
@@ -111,7 +113,7 @@
 .article-header{margin-bottom:1px;padding:2px 20px 12px;background-color:#fbfbfb;}
 .article-title a{color: #444;}
 .article-content{font-size:14px;line-height:25px;word-break:break-all;word-wrap:break-word;padding-bottom:5px}
-.article-content h3,.article-content h4£¬ .article-content h5{border-bottom:#eee 1px solid;padding-bottom:5px;margin-bottom:20px}
+.article-content h3,.article-content h4ï¿½ï¿½ .article-content h5{border-bottom:#eee 1px solid;padding-bottom:5px;margin-bottom:20px}
 .article-content h2{font-size:18px;font-weight:normal;margin:20px -20px 20px -24px;padding:10px 20px 9px 20px;line-height:18px;border-left:4px solid #428BCA;background-color:#fbfbfb}
 .article-content h3{font-size:16px}
 .article-content h4{font-size:14px}
@@ -447,7 +449,7 @@ pre.prettyprint.linenums ol li {
 .navbar .screen-mini{display: none;}
 
 
-/*±¾ÖÜÈÈÃÅ*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .clear{}
 .clear:after{display: block;font-size:0; visibility: hidden; overflow: hidden; clear: both; height: 0; content: "";}
 .week-hot{ background-color: #fff;padding:20px 10px;margin-bottom:10px;}

@@ -20,7 +20,8 @@
     .navbar .nav > li > ul > li > ul{position:relative;display: block;top: 0;left: 0;padding-bottom: 0;}
 
     .navbar .nav > li > ul > li{float:none;margin:0;position:relative;border-bottom: 1px solid #ddd;}
-    .navbar .nav > li > ul > li > a, .navbar .nav > li > ul > li > ul > li > a{float:none;display:block;*min-width:100px;padding: 10px 20px 9px 50px;color:#444}
+    .navbar .nav > li > ul > li > a,
+    .navbar .nav > li > ul > li > ul > li > a{float:none;display:block;*min-width:100px;padding: 10px 20px 9px 50px;color:#444}
     .navbar .nav > li > ul > li > ul > li > a{padding-left: 80px;}
     .navbar .nav > li > ul > li > a:hover,.navbar .nav li li.current-menu-item a{color:#444}
     .navbar .nav li li a:hover,.navbar .nav li li.current-menu-item a{background-color:#fff}

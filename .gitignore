@@ -18,3 +18,4 @@ out/
 node_modules/
 tmp/
 build/
+wp-config/

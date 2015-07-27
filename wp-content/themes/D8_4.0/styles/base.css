@@ -133,13 +133,13 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 [class*="span"].hide,.row-fluid [class*="span"].hide{display:none}
 [class*="span"].pull-right,.row-fluid [class*="span"].pull-right{float:right}
 body{margin:0;font-family:"Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:#555555;background-color:#eeeeee;overflow-x: hidden;}
-a{color:#428BD1;text-decoration:none}
-a:hover,a:focus{color:#3071A9;text-decoration:none}
+a{color:#555;text-decoration:none}
+a:hover,a:focus{color: #FF7E69;text-decoration:none}
 ::selection{background:#72d0eb;color:#fff;text-shadow:none}
 ::-moz-selection{background:#72d0eb;color:#fff;text-shadow:none}
 .header,
 .container,
-.footer{max-width:1320px; min-width:320px;margin:0 auto;text-align:left;position:relative;*zoom:1}
+.footer{max-width:1110px; min-width:320px;margin:0 auto;text-align:left;position:relative;*zoom:1}
 .container{width:1110px;}
 
 .header:before,
@@ -149,7 +149,16 @@ a:hover,a:focus{color:#3071A9;text-decoration:none}
 .container:after,
 .footer:after{display:table;content:"";line-height:0}
 .header:after,.container:after,.footer:after{clear:both}
-.header{top:0;width:100%;z-index:999;margin-bottom:10px}
+
+.header{top:0;width:100%;z-index:999;margin-bottom:10px;height:140px;background-color: #fff;}
+.header-logo{background:url("img/header-logo.png") 0 0 no-repeat; width: 80px; height: 140px;margin-left:10px; }
+.header-name{padding:20px 0 0 30px; white-space: nowrap;}
+.header-name h1 a{color:#DC643C;font-size:32px;padding-bottom:10px;}
+.header-name p{color:#999;}
+.header-name p a{color:#FF7E69;}
+.header-name p a:hover{ text-decoration: underline;}
+.header .menu{padding:25px 25px 0 0;}
+
 .container{margin-bottom:10px}
 .content-wrap{width:100%;float:left}
 .content{margin-right:370px}
