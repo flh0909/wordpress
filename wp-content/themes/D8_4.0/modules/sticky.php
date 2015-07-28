@@ -2,7 +2,7 @@
 	<h2 class="title">置顶推荐</h2>
 	<ul>
 	<?php $sticky = get_option('sticky_posts'); rsort( $sticky );
-		query_posts( array( 'post__in' => $sticky, 'caller_get_posts' => 1, 'showposts' => dopt('d_sticky_count')?dopt('d_sticky_count'):2 ) );
+		query_posts( array( 'post__in' => $sticky, 'ignore_sticky_posts' => 1, 'showposts' => dopt('d_sticky_count')?dopt('d_sticky_count'):2 ) );
 		while (have_posts()) : the_post(); 
 
 		echo '<li class="item"><a href="'.get_permalink().'">';
