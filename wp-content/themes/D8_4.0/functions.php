@@ -144,7 +144,7 @@ function footerScript() {
 
     }  
 }  
-add_action( 'init', 'footerScript' );
+add_action( 'wp_enqueue_scripts', 'footerScript' );
 
 
 if ( ! function_exists( 'deel_paging' ) ) :

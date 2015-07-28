@@ -27,7 +27,7 @@
     border-bottom: 1px solid #eaeaea;
     font-weight: normal;}
 
-.sticky{overflow: hidden;}
+.sticky{overflow: hidden; margin-bottom: 10px;}
 .sticky ul{margin-right: -2px;}
 .sticky li{width: 50%;float: left;margin-bottom: 1px;}
 .sticky li span{margin-left: -20px;}
@@ -51,7 +51,7 @@
 .excerpt{background-color:#fff;padding:20px 20px 20px 256px;margin-bottom:1px;position:relative;border-left:solid 4px #fff;*zoom:1}
 .excerpt:before,.excerpt:after{display:table;content:"";line-height:0}
 .excerpt:after{clear:both}
-.excerpt:hover{border-left-color:#FF7E69;padding-left:260px;margin-left:-4px;background-color:#FFF3F3}
+.excerpt:hover{border-left-color:#8e60bb;padding-left:260px;margin-left:-4px;background-color: #FBF5FF; }
 .excerpt-nothumbnail{padding-left: 20px;}
 .excerpt-nothumbnail:hover{padding-left: 24px;}
 .excerpt header{margin:0 0 15px 0;height:25px; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
@@ -68,13 +68,13 @@
 .excerpt header .label{margin-right:5px;position:relative;top:-2px}
 
 .excerpt h2{display:inline;font-size:20px;margin:0;font-weight:normal;position:relative;top:1px;line-height:25px}
-.excerpt h2 a{color:#FF7E69}
-.excerpt h2 a:hover{color:#DC643C}
+.excerpt h2 a{color:#8e60bb}
+.excerpt h2 a:hover{color:#7B37AD}
 .excerpt h2 strong{color:#8CAC52;margin-right:10px}
-.excerpt .note{color:#777;font-size: 14px;line-height: 24px;}
+.excerpt .note{color:#999;font-size: 14px;line-height: 24px;}
 .excerpt .itag a{border-style:solid;border-width:1px;border-color:#e2e2e2 #ddd #ddd #e2e2e2;display:inline-block;margin-right:3px;border-radius:1px;padding:0 5px;line-height:18px}
 .excerpt .muted,.article-header .muted,.article-header .cate{margin-right:20px}
-.excerpt .note{margin-bottom:0}
+.excerpt .note{margin-bottom:0; text-align: justify;}
 .comm{position:absolute;right:20px;top:23px;color:#fff;background-color:#428bca;padding:1px 8px 0px;min-width:14px;text-align:center}
 .comm i{display:inline-block;border:5px dotted;border-color:#428bca transparent;border-bottom-width:0;border-left-width:0;position:absolute;bottom:-5px;left:50%;margin-left:-2px}
 .comm:hover{color:#fff;background-color:#D9534F}
@@ -130,8 +130,8 @@
 .article-content .alignleft{float:left;text-align:left;margin-right:10px}
 .article-content .aligncenter{margin: 0 auto;text-align: center;display: block;}
 .article-content .alignright{float:right;text-align:right;margin-left:10px}
-.article-content a{color:#428bca;text-decoration:underline}
-.article-content a:hover{color:#D9534F}
+.article-content a{color:#8e60bb;text-decoration:underline}
+.article-content a:hover{color:#7B37AD}
 .article-footer{background-color:#fff;border-top:1px solid #f7f7f7}
 .article-tags{margin-bottom: 15px;}
 .article-tags a{display:inline-block;padding:2px 7px 1px;margin:0 1px;color:#eee;font-size:12px;background-color:#4a4a4a;opacity: 0.90;
@@ -230,8 +230,8 @@
 .widget_calendar table #next{text-align:right}
 .widget_calendar table tbody td,.widget_calendar table tfoot td,.widget_calendar table thead th{padding:5px 3px;border:1px solid #eee;}
 .widget_calendar table thead th{background-color:#fbfbfb}
-.widget_calendar table tbody td a{display:block;margin:0 3px;background-color:#428BCA;color:#fff}
-.widget_calendar table tbody td a:hover{background-color: #357EBD;}
+.widget_calendar table tbody td a{display:block;margin:0 3px;background-color:#8e60bb;color:#fff}
+.widget_calendar table tbody td a:hover{background-color: #7B37AD;}
 .widget_categories{}
 .widget_categories ul{overflow:hidden;padding:10px 0 5px;color:#bbb}
 .widget_categories li{float:left;width:50%;margin-bottom: 5px;}
@@ -449,7 +449,7 @@ pre.prettyprint.linenums ol li {
 .navbar .screen-mini{display: none;}
 
 
-/*��������*/
+/*本周热门*/
 .clear{}
 .clear:after{display: block;font-size:0; visibility: hidden; overflow: hidden; clear: both; height: 0; content: "";}
 .week-hot{ background-color: #fff;padding:20px 10px;margin-bottom:10px;}
@@ -458,3 +458,20 @@ pre.prettyprint.linenums ol li {
 .week-hot .thumbnail{}
 .week-hot .thumbnail img{width:220px;height:150px;}
 .week-hot-title{font-size:14px; line-height: 20px;height:40px; overflow: hidden; display: inline-block; padding-top: 10px;}
+
+
+/*今日推荐*/
+.recommend{background-color: #fff;padding:20px; margin-bottom: 10px;}
+.recommend-top{float:left;}
+.recommend-top a{ position: relative; display: block;width:330px;height:225px;}
+.recommend-top a img{ width: 330px; height: 225px; vertical-align: top;}
+.recommend-top a span{position:absolute;width:310px;height:30px;line-height:30px;padding:0 10px;bottom:0;left:0; background-color: rgba(0, 0, 0, 0.50);font-size:14px;color:#fff;}
+.recommend-list{float:left;margin-left:20px;width:350px;}
+.recommend-list li{padding:5px 0;}
+.recommend-list a{ font-size:20px; line-height: 30px;}
+
+
+
+
+
+

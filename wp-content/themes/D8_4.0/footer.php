@@ -1,6 +1,6 @@
 </section>
-<footer class="footer container">
-    <div class="footer-inner">
+<footer class="footer">
+    <div class="footer-inner container">
         <div class="copyright pull-left">
             版权所有，保留一切权利！ &copy; <?php echo date('Y'); ?> <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>　Theme <a href="http://www.daqianduan.com/" target="_blank"><?php echo get_current_theme(); ?></a>
         </div>

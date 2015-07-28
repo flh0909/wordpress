@@ -372,3 +372,8 @@ if ( is_multisite() ) {
  * @since 3.0.0
  */
 do_action( 'wp_loaded' );
+
+
+@ini_set('log_errors','On');
+@ini_set('display_errors','Off');
+@ini_set('error_log','E:/php/error.log');

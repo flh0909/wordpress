@@ -36,6 +36,8 @@ a.text-success:hover,a.text-success:focus{color:#448a37}
 .text-left{text-align:left}
 .text-right{text-align:right}
 .text-center{text-align:center}
+.text-overflow {overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap;display:inline-block; vertical-align:middle;}
+
 h1,h2,h3,h4,h5,h6{margin:5px 0;font-family:inherit;font-weight:bold;line-height:20px;color:inherit;text-rendering:optimizelegibility}
 h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{font-weight:normal;line-height:1;color:#999999}
 h1,h2,h3{line-height:35px}
@@ -132,14 +134,14 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 .row-fluid .offset1:first-child{margin-left:8.5%;*margin-left:8.399999999999999%}
 [class*="span"].hide,.row-fluid [class*="span"].hide{display:none}
 [class*="span"].pull-right,.row-fluid [class*="span"].pull-right{float:right}
-body{margin:0;font-family:"Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:#555555;background-color:#eeeeee;overflow-x: hidden;}
-a{color:#555;text-decoration:none}
-a:hover,a:focus{color: #FF7E69;text-decoration:none}
+body{margin:0;font-family:"Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:#666;background-color:#eeeeee;overflow-x: hidden;}
+a{color:#666;text-decoration:none}
+a:hover,a:focus{color: #8e60bb;text-decoration:none}
 ::selection{background:#72d0eb;color:#fff;text-shadow:none}
 ::-moz-selection{background:#72d0eb;color:#fff;text-shadow:none}
 .header,
-.container,
-.footer{max-width:1110px; min-width:320px;margin:0 auto;text-align:left;position:relative;*zoom:1}
+.container{max-width:1110px; min-width:320px;margin:0 auto;text-align:left;position:relative;*zoom:1}
+/*.footer{max-width:1110px; min-width:320px;margin:0 auto;text-align:left;position:relative;*zoom:1}*/
 .container{width:1110px;}
 
 .header:before,
@@ -153,9 +155,9 @@ a:hover,a:focus{color: #FF7E69;text-decoration:none}
 .header{top:0;width:100%;z-index:999;margin-bottom:10px;height:140px;background-color: #fff;}
 .header-logo{background:url("img/header-logo.png") 0 0 no-repeat; width: 80px; height: 140px;margin-left:10px; }
 .header-name{padding:20px 0 0 30px; white-space: nowrap;}
-.header-name h1 a{color:#DC643C;font-size:32px;padding-bottom:10px;}
+.header-name h1 a{color:#7B37AD;font-size:32px;padding-bottom:10px;}
 .header-name p{color:#999;}
-.header-name p a{color:#FF7E69;}
+.header-name p a{color:#8e60bb;}
 .header-name p a:hover{ text-decoration: underline;}
 .header .menu{padding:25px 25px 0 0;}
 
@@ -166,10 +168,11 @@ a:hover,a:focus{color: #FF7E69;text-decoration:none}
 .page-sidebar{width: 225px;position: absolute;top: 0;left: 0;bottom: 0;height:100%;border-right: 1px solid #eee;}
 .content-title{font-size: 20px;font-weight: normal;padding: 15px 20px 14px;line-height: 20px;background-color: #F7F7F7;margin: 0 0 1px;border-bottom: 1px solid #eee;}
 .sidebar{float:left;margin-left:-360px;width:360px;position:relative}
-.footer{clear:both;color:#ddd;text-shadow:0 -1px 0 #333333;position:relative;z-index:1}
+.footer{clear:both;color:#ddd;text-shadow:0 -1px 0 #333333;position:relative;z-index:1;background-color:#414141;border-left:5px solid #8e60bb;}
 .trackcode{float:right}
-.footer-inner{padding:16px 20px 14px;color:#aaa;text-shadow:0 -1px 0 #333333;background-color:#414141;border-left:20px solid #428bca;*zoom:1}
-.footer-inner:before,.footer-inner:after{display:table;content:"";line-height:0}
+.footer-inner{padding:16px 20px 14px;color:#aaa;text-shadow:0 -1px 0 #333333;*zoom:1}
+.footer-inner:before,
+.footer-inner:after{display:table;content:"";line-height:0}
 .footer-inner:after{clear:both}
 .footer a{color:#aaa}
 .footer a:hover{color:#ddd;text-decoration:underline}

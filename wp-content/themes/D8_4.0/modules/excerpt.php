@@ -39,7 +39,7 @@ if( has_post_thumbnail() || !dopt('d_thumbnail_b') ){
 	<p class="note">
 		<?php 
 		if( !post_password_required() ){
-			echo deel_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 125, '...'); 
+			echo deel_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 90, '...');
 		}else{
 			echo '密码保护文章，暂无摘要！';
 		}

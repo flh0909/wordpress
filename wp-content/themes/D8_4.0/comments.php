@@ -17,7 +17,9 @@ $count_t = $post->comment_count;
 date_default_timezone_set(PRC);
 $closeTimer = (strtotime(date('Y-m-d G:i:s'))-strtotime(get_the_time('Y-m-d G:i:s')))/86400;
 ?>
+<div id="comments"></div>
 <div id="respond" class="no_webshot">
+
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) { ?>
 	<h3 class="queryinfo">
 		<?php printf('您必须 <a href="%s">登录</a> 才能发表评论！', wp_login_url( get_permalink() ) );?>
