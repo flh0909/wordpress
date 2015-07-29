@@ -170,7 +170,7 @@ a:hover,a:focus{color: #8e60bb;text-decoration:none}
 .sidebar{float:left;margin-left:-360px;width:360px;position:relative}
 .footer{clear:both;color:#ddd;text-shadow:0 -1px 0 #333333;position:relative;z-index:1;background-color:#414141;border-left:5px solid #8e60bb;}
 .trackcode{float:right}
-.footer-inner{padding:16px 20px 14px;color:#aaa;text-shadow:0 -1px 0 #333333;*zoom:1}
+.footer-inner{padding:16px 20px 14px;margin-bottom:0; color:#aaa;text-shadow:0 -1px 0 #333333;*zoom:1}
 .footer-inner:before,
 .footer-inner:after{display:table;content:"";line-height:0}
 .footer-inner:after{clear:both}
