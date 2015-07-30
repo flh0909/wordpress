@@ -160,6 +160,7 @@ a:hover,a:focus{color: #8e60bb;text-decoration:none}
 .header-name p a{color:#8e60bb;}
 .header-name p a:hover{ text-decoration: underline;}
 .header .menu{padding:25px 25px 0 0;}
+.header .btn-group{ display: none;}
 
 .container{margin-bottom:10px}
 .content-wrap{width:100%;float:left}

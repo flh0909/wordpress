@@ -168,7 +168,7 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .navbar:before,.navbar:after{display:table;content:"";line-height:0}
 .navbar:after{clear:both}
 
-.navbar .logo{display:none; float:left;width:230px;background:#FF7E69 url("img/logo.png") no-repeat 50% 50%;height:52px;overflow:hidden;line-height:208px;font-size:18px;font-weight:bold;color:#fff;margin:0;*line-height: 0;*text-indent: -999;}
+.navbar .logo{display:none; float:left;width:230px;background:#8e60bb url("img/logo.png") no-repeat 50% 50%;background-size: contain; height:52px;overflow:hidden;line-height:208px;font-size:18px;font-weight:bold;color:#fff;margin:0;*line-height: 0;*text-indent: -999;}
 .navbar .logo a{height:52px;display:block;color:#fff;overflow:hidden}
 .navbar .nav{position:relative;left:0;display:block;float:left;margin:0 10px 0 0;font-size:14px}
 .navbar .nav.pull-right{float:right;margin-right:0}

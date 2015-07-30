@@ -97,7 +97,6 @@
             <ul class="dropdown-menu search-suggest"></ul>
         </form>
         <div class="btn-group pull-left">
-            <button class="btn btn-primary" data-toggle="modal" data-target="#feed">订阅</button>
             <?php if (dopt('d_tqq_b') || dopt('d_weibo_b') || dopt('d_facebook_b') || dopt('d_twitter_b')) { ?>
                 <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">关注 <i class="caret"></i></button>
                 <ul class="dropdown-menu pull-right">

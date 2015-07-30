@@ -5,7 +5,8 @@
 }
 
 @media (max-width:979px){
-    .navbar .logo, .navbar .logo a{height: 42px;display: block;width: 100%;float: none;}
+    .navbar .logo,
+    .navbar .logo a{height: 42px;display: block;width: 100%;float: none;}
     .navbar{background-color: transparent;height: auto}
     .navbar .screen-mini{display: block;float: left;}
     .navbar .screen-mini .btn{background-color: #4A4A4A;padding: 16px 22px}
@@ -39,6 +40,10 @@
     .tag-clouds li{width: 50%;}
     .navbar .btn.screen-nav{padding: 11px 20px;height:auto;position: absolute;top: 0;left: 0;background-color: transparent;}
     .navbar .btn.screen-nav:hover{background-color: transparent;}
+
+
+    .header .menu{float: none;margin: 15px 20px 10px;text-align: center;}
+    .header .menu .btn-group{float: none;display: inline-block;margin-top: -24px;}
 
     .article-content{font-size: 16px;}
 
@@ -86,13 +91,20 @@
     .row-fluid .offset1:first-child{margin-left:8.441558441558442%;*margin-left:8.34155844155844%}
 }
 @media (max-width:767px){
+    .week-hot{height:275px; overflow: hidden;}
+    .week-hot li{width:50%;}
+
     .pagecontent{margin-left: 0;}
     .pagesidebar{display: none;}
     .speedbar{display: none;}
-    .sticky{display: none;}
+    .sticky{}
+    .sticky li{width:100%;}
     .navbar .menu{margin-left: 0;margin-right: 0;}
+    .header .menu{margin-left: 0;margin-right: 0;padding:0;}
+    .header-logo,
+    .header-name{ display: none;}
     input.search-input{width: 300px;}
-    .header{position: relative;}
+    .header{position: relative; height: auto;}
 
     .relates li{float: none;width: 100%;}
     .relates a{height: auto;padding: 0 20px 12px;text-align: left;line-height: 14px;border-left: none;}
@@ -122,7 +134,9 @@
 
 }
 @media (max-width:640px){
-    input.search-input{width: 200px;}
+    input.search-input{width: 360px;}
+
+
 
     .excerpt, .excerpt:hover{padding: 12px 20px;border-left: none;}
     .excerpt:hover{margin-left: 0;}
@@ -139,7 +153,11 @@
 
 }
 @media (max-width:480px){
-    input.search-input{width: 100px;}
+    input.search-input{width: 220px;}
+
+
+    .week-hot{height:auto; overflow: auto;}
+    .week-hot li{width:100%;}
 
     .title{padding: 6px 12px;}
     .navbar .btn.screen-nav{padding:  11px 12px;}
@@ -162,7 +180,7 @@
 }
 @media (max-width:360px){
     .navbar{margin-bottom: 0;}
-    .navbar .menu .btn-group{display: none;}
-    .navbar .menu{display: none;}
+    .header .menu .btn-group{display: none;}
+    .header .menu{}
     .banner-navbar, .banner-site{margin-bottom: 0;}
 }

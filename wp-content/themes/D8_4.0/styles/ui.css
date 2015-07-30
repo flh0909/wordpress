@@ -452,8 +452,8 @@ pre.prettyprint.linenums ol li {
 /*本周热门*/
 .clear{}
 .clear:after{display: block;font-size:0; visibility: hidden; overflow: hidden; clear: both; height: 0; content: "";}
-.week-hot{ background-color: #fff;padding:20px 10px;margin-bottom:10px;}
-.week-hot li{float:left;width:33.333333%; text-align: center;}
+.week-hot{ background-color: #fff;padding:0 10px;margin-bottom:10px;}
+.week-hot li{float:left;width:33.333333%; text-align: center;margin:20px auto;}
 .week-hot li div{width:220px;margin:0 auto; text-align: left;; }
 .week-hot .thumbnail{}
 .week-hot .thumbnail img{width:220px;height:150px;}

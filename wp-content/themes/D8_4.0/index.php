@@ -3,7 +3,10 @@
     <div class="content-wrap">
         <div class="content">
 
-            <?php if (dopt('d_sticky_b')) include 'modules/sticky.php'; ?>
+            <?php
+            if( $paged && $paged > 1 ){}else{
+                if (dopt('d_sticky_b')) include 'modules/sticky.php';
+            ?>
 
 
             <h2 class="title">本周热门</h2>
@@ -46,18 +49,18 @@
                 <?php endwhile;
                 wp_reset_query(); ?>
             </ul>
-
+            <?php }?>
 
             <?php
             if (dopt('d_adindex_03_b')) printf('<div class="banner banner-contenttop">' . dopt('d_adindex_03') . '</div>');
 
-            #if( $paged && $paged > 1 ){
-            #printf('<header class="archive-header"><h1>最新发布 第'.$paged.'页</h1><div class="archive-header-info"><p>'.get_option('blogname').get_option('blogdescription').'</p></div></header>');
-            #}else{
+            if( $paged && $paged > 1 ){
+            printf('<header class="archive-header"><h1>最新发布 第'.$paged.'页</h1><div class="archive-header-info"><p>'.get_option('blogname').get_option('blogdescription').'</p></div></header>');
+            }else{
             #if (dopt('d_sticky_b')) include 'modules/sticky.php';
 
             printf('<h2 class="title">最新发布</h2>');
-            #}
+            }
 
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = array(
