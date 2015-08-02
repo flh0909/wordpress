@@ -18,6 +18,7 @@
 				<?php if ( comments_open() ) echo '<span class="muted"><i class="icon-comment icon12"></i> <a href="'.get_comments_link().'">'.get_comments_number('去', '1', '%').'评论</a></span>'; ?>
 				<?php edit_post_link('[编辑]'); ?>
 			</div>
+			<?php deel_share(); ?>
 		</header>
 
 		<?php if( dopt('d_adpost_01_b') ) echo '<div class="banner banner-post">'.dopt('d_adpost_01').'</div>'; ?>

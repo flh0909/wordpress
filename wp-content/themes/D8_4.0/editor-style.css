@@ -18,6 +18,7 @@ table td,table th{border-bottom:solid 1px #ddd;border-right:solid 1px #ddd;paddi
 .aligncenter{text-align:center}
 .alignright{float:right;text-align:right;margin-left:10px}
 
+.mce-object{margin:0 auto;}
 
 pre{margin:15px auto;font:12px/20px 'courier new';border:1px solid #d6d6d6;border-left-width:4px;background:#fbfbfb;padding:10px 15px}
 blockquote{margin:15px auto;border:1px solid #d6d6d6;border-top-width:3px;padding:15px 20px 10px;background-color:#fdfdfd;}

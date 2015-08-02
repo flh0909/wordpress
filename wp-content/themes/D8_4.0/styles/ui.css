@@ -123,6 +123,7 @@
 .article-content ul li{background:url(data:image/gif;base64,R0lGODlhDQAFAKIAAKOjo6GhoampqYSEhJWVlZ2dnZmZmXx8fCH5BAAAAAAALAAAAAANAAUAAAMVKLfcB6PIScsZJuttLvlgSByK4wQJADs=) no-repeat 0 10px;padding-left:20px;margin-bottom:10px;*list-style:disc;*padding-left:0;line-height:25px}
 .article-content ol li{list-style:decimal;margin-left:28px;line-height:25px}
 .article-content p{margin-bottom:15px}
+.article-content embed{ margin:0 auto;}
 .article-content pre{word-break:break-all;word-wrap:break-word}
 .article-content table{border-top:solid 1px #ddd;border-left:solid 1px #ddd;width:100%;margin-bottom:16px}
 .article-content table th{background-color:#f9f9f9;text-align:center}
