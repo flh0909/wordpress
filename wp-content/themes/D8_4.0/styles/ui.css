@@ -462,15 +462,15 @@ pre.prettyprint.linenums ol li {
 
 
 /*今日推荐*/
-.recommend{background-color: #fff;padding:20px; margin-bottom: 10px;}
-.recommend-top{float:left;}
-.recommend-top a{ position: relative; display: block;width:330px;height:225px;}
+.recommend{background-color: #fff;padding:20px 0 20px 350px; margin-bottom: 10px;}
+.recommend-top{float:left;margin-left:-330px;}
+.recommend-top a{ position: relative; display: block;width:330px;height:225px;margin: 0 auto;}
 .recommend-top a img{ width: 330px; height: 225px; vertical-align: top;}
-.recommend-top a span{position:absolute;width:310px;height:30px;line-height:30px;padding:0 10px;bottom:0;left:0; background-color: rgba(0, 0, 0, 0.50);font-size:14px;color:#fff;}
-.recommend-list{float:left;margin-left:20px;width:350px;}
-.recommend-list li{padding:5px 0;}
-.recommend-list a{ font-size:20px; line-height: 30px;}
-
+.recommend-top a span{position:absolute;height:30px;line-height:30px;padding:0 10px;bottom:0;left:0; background-color: rgba(0, 0, 0, 0.50);font-size:14px;color:#fff;right:0;}
+.recommend-list{padding:0 20px;margin-top:-2px;box-sizing:border-box;}
+.recommend-list li{padding:0 0 5px;}
+.recommend-list a{ font-size:16px; line-height: 20px; max-width: 100%;color:#333;padding-bottom:5px;}
+.recommend-list p{}
 
 
 

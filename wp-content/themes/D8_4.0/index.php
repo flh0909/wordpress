@@ -5,7 +5,9 @@
 
             <?php
             if( $paged && $paged > 1 ){}else{
-                if (dopt('d_sticky_b')) include 'modules/sticky.php';
+                // if (dopt('d_sticky_b')) include 'modules/sticky.php';
+
+                include 'modules/recommend.php';
             ?>
 
 

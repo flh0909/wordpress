@@ -1,17 +1,13 @@
 <h2 class="title">今日推荐</h2>
 <div class="recommend clear">
-    <?php $args = array(
-        'order' => 'DESC',
-        'orderby'=>'date',
-        'cat' => 39,
-        'posts_per_page' => 4
-    );
-    query_posts($args);
-    $_post_index = 0;
-    ?>
+    <?php $_post_index = 0; ?>
 
-    <?php while (have_posts()) :
+    <?php $sticky = get_option('sticky_posts');
+    rsort($sticky);
+    query_posts(array('post__in' => $sticky, 'ignore_sticky_posts' => 1, 'showposts' => dopt('d_sticky_count') ? dopt('d_sticky_count') : 2));
+    while (have_posts()) :
     the_post();
+
     if ($_post_index == 0){
     ?>
     <div class="recommend-top">
@@ -20,14 +16,17 @@
         </a>
     </div>
     <ul class="recommend-list ">
-        <?php } else {?>
+        <?php } else { ?>
             <li>
-                <a href="<?php the_permalink() ?>"  title="<?php the_title(); ?> - <?php bloginfo('name'); ?>"><?php the_title(); ?></a>
+                <a class="text-overflow" href="<?php the_permalink() ?>" title="<?php the_title(); ?> - <?php bloginfo('name'); ?>"><?php the_title(); ?></a>
+                <p class="muted"><?php echo deel_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 48, '...')?></p>
             </li>
-            <?php
+
+        <?php
         }
         $_post_index++;
         endwhile;
-        wp_reset_query(); ?>
+        wp_reset_query();
+        ?>
     </ul>
 </div>
