@@ -8,40 +8,40 @@ include('admin/d8.php');
 include('widgets/index.php');
 
 function deel_setup(){
-  
+
 	//去除头部冗余代码
-	remove_action( 'wp_head',   'feed_links_extra', 3 ); 
-	remove_action( 'wp_head',   'rsd_link' ); 
-	remove_action( 'wp_head',   'wlwmanifest_link' ); 
-	remove_action( 'wp_head',   'index_rel_link' ); 
-	remove_action( 'wp_head',   'start_post_rel_link', 10, 0 ); 
-	remove_action( 'wp_head',   'wp_generator' ); 
+	remove_action( 'wp_head',   'feed_links_extra', 3 );
+	remove_action( 'wp_head',   'rsd_link' );
+	remove_action( 'wp_head',   'wlwmanifest_link' );
+	remove_action( 'wp_head',   'index_rel_link' );
+	remove_action( 'wp_head',   'start_post_rel_link', 10, 0 );
+	remove_action( 'wp_head',   'wp_generator' );
 
 	//隐藏admin Bar
 	add_filter('show_admin_bar','hide_admin_bar');
 
 	//关键字
-	add_action('wp_head','deel_keywords');   
+	add_action('wp_head','deel_keywords');
 
-	//页面描述 
-	add_action('wp_head','deel_description');   
+	//页面描述
+	add_action('wp_head','deel_description');
 
 	//阻止站内PingBack
 	if( dopt('d_pingback_b') ){
-		add_action('pre_ping','deel_noself_ping');   
-	}   
+		add_action('pre_ping','deel_noself_ping');
+	}
 
 	//评论回复邮件通知
-	add_action('comment_post','comment_mail_notify'); 
+	add_action('comment_post','comment_mail_notify');
 
-	//自动勾选评论回复邮件通知，不勾选则注释掉 
+	//自动勾选评论回复邮件通知，不勾选则注释掉
 	// add_action('comment_form','deel_add_checkbox');
 
 	//评论表情改造，如需更换表情，img/smilies/下替换
-	add_filter('smilies_src','deel_smilies_src',1,10); 
+	add_filter('smilies_src','deel_smilies_src',1,10);
 
 	//文章末尾增加版权
-	add_filter('the_content','deel_copyright');    
+	add_filter('the_content','deel_copyright');
 
 	//移除自动保存和修订版本
 	if( dopt('d_autosave_b') ){
@@ -50,7 +50,7 @@ function deel_setup(){
 	}
 
 	//去除自带js
-	wp_deregister_script( 'l10n' ); 
+	wp_deregister_script( 'l10n' );
 
 	//修改默认发信地址
 	add_filter('wp_mail_from', 'deel_res_from_email');
@@ -58,13 +58,13 @@ function deel_setup(){
 
 	//缩略图设置
 	add_theme_support('post-thumbnails');
-	set_post_thumbnail_size(220, 150, true); 
+	set_post_thumbnail_size(220, 150, true);
 
 	add_editor_style('editor-style.css');
 
-	//头像缓存  
+	//头像缓存
 	if( dopt('d_avatar_b') ){
-		add_filter('get_avatar','deel_avatar');  
+		add_filter('get_avatar','deel_avatar');
 	}
 
 	//定义菜单
@@ -125,7 +125,7 @@ function deel_breadcrumbs(){
     if( !is_single() ) return false;
     $categorys = get_the_category();
     $category = $categorys[0];
-    
+
     return '你的位置：<a href="'.get_bloginfo('url').'">'.get_bloginfo('name').'</a> <small>></small> '.get_category_parents($category->term_id, true, ' <small>></small> ').'<span class="muted">'.get_the_title().'</span>';
 }
 
@@ -137,13 +137,13 @@ function footerScript() {
 
 
         wp_deregister_script( 'jquery' );
-        wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.js', false, '3.0', dopt('d_jquerybom_b') ? true : false );   
+        wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.js', false, '3.0', dopt('d_jquerybom_b') ? true : false );
         wp_enqueue_script( 'jquery' );
 
         wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', false, '3.0', dopt('d_jquerybom_b') ? true : false );
 
-    }  
-}  
+    }
+}
 add_action( 'wp_enqueue_scripts', 'footerScript' );
 
 
@@ -153,15 +153,15 @@ function deel_paging() {
     if ( is_singular() ) return;
     global $wp_query, $paged;
     $max_page = $wp_query->max_num_pages;
-    if ( $max_page == 1 ) return; 
+    if ( $max_page == 1 ) return;
     echo '<div class="pagination"><ul>';
     if ( empty( $paged ) ) $paged = 1;
-    // echo '<span class="pages">Page: ' . $paged . ' of ' . $max_page . ' </span> '; 
+    // echo '<span class="pages">Page: ' . $paged . ' of ' . $max_page . ' </span> ';
     echo '<li class="prev-page">'; previous_posts_link('上一页'); echo '</li>';
 
     if ( $paged > $p + 1 ) p_link( 1, '<li>第一页</li>' );
     if ( $paged > $p + 2 ) echo "<li><span>···</span></li>";
-    for( $i = $paged - $p; $i <= $paged + $p; $i++ ) { 
+    for( $i = $paged - $p; $i <= $paged + $p; $i++ ) {
         if ( $i > 0 && $i <= $max_page ) $i == $paged ? print "<li class=\"active\"><span>{$i}</span></li>" : p_link( $i );
     }
     if ( $paged < $max_page - $p - 1 ) echo "<li><span> ... </span></li>";
@@ -187,21 +187,21 @@ function dopt($e){
 
 if ( ! function_exists( 'deel_views' ) ) :
 function deel_record_visitors(){
-	if (is_singular()) 
+	if (is_singular())
 	{
 	  global $post;
 	  $post_ID = $post->ID;
-	  if($post_ID) 
+	  if($post_ID)
 	  {
 		  $post_views = (int)get_post_meta($post_ID, 'views', true);
-		  if(!update_post_meta($post_ID, 'views', ($post_views+1))) 
+		  if(!update_post_meta($post_ID, 'views', ($post_views+1)))
 		  {
 			add_post_meta($post_ID, 'views', 1, true);
 		  }
 	  }
 	}
 }
-add_action('wp_head', 'deel_record_visitors');  
+add_action('wp_head', 'deel_record_visitors');
 
 function deel_views($after=''){
   global $post;
@@ -212,21 +212,21 @@ function deel_views($after=''){
 endif;
 
 if ( ! function_exists( 'deel_thumbnail' ) ) :
-function deel_thumbnail() {  
-	global $post;  
-	if ( has_post_thumbnail() ) {   
+function deel_thumbnail() {
+	global $post;
+	if ( has_post_thumbnail() ) {
 		$domsxe = simplexml_load_string(get_the_post_thumbnail());
-		$thumbnailsrc = $domsxe->attributes()->src;  
+		$thumbnailsrc = $domsxe->attributes()->src;
 		echo '<img src="'.$thumbnailsrc.'" alt="'.trim(strip_tags( $post->post_title )).'" />';
 	} else {
-		$content = $post->post_content;  
-		preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);  
-		$n = count($strResult[1]);  
+		$content = $post->post_content;
+		preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);
+		$n = count($strResult[1]);
 		if($n > 0){
-			echo '<img src="'.$strResult[1][0].'" alt="'.trim(strip_tags( $post->post_title )).'" />';  
+			echo '<img src="'.$strResult[1][0].'" alt="'.trim(strip_tags( $post->post_title )).'" />';
 		}else {
-			echo '<img src="'.get_bloginfo('template_url').'/img/thumbnail.png" alt="'.trim(strip_tags( $post->post_title )).'" />';  
-		}  
+			echo '<img src="'.get_bloginfo('template_url').'/img/thumbnail.png" alt="'.trim(strip_tags( $post->post_title )).'" />';
+		}
 	}
 }
 endif;
@@ -238,16 +238,16 @@ if (!function_exists('remove_wp_open_sans')) :
         wp_register_style( 'open-sans', false );
     }
     add_action('wp_enqueue_scripts', 'remove_wp_open_sans');
- 
+
     // Uncomment below to remove from admin
     // add_action('admin_enqueue_scripts', 'remove_wp_open_sans');
 endif;
 
-function remove_open_sans() {    
-    wp_deregister_style( 'open-sans' );    
-    wp_register_style( 'open-sans', false );    
-    wp_enqueue_style('open-sans','');    
-}    
+function remove_open_sans() {
+    wp_deregister_style( 'open-sans' );
+    wp_register_style( 'open-sans', false );
+    wp_enqueue_style('open-sans','');
+}
 add_action( 'init', 'remove_open_sans' );
 
 /*function custom_login() {   
@@ -260,7 +260,7 @@ function deel_share(){
   echo '<div class="share"><h5>分享到 </h5><div class="bdsharebuttonbox"><a class="bds_qzone" data-cmd="qzone"></a><a class="bds_tsina" data-cmd="tsina"></a><a class="bds_weixin" data-cmd="weixin"></a><a class="bds_tqq" data-cmd="tqq"></a><a class="bds_sqq" data-cmd="sqq"></a><a class="bds_renren" data-cmd="renren"></a><a class="bds_t163" data-cmd="t163"></a><a class="bds_tsohu" data-cmd="tsohu"></a><a class="bds_baidu" data-cmd="baidu"></a><a class="bds_douban" data-cmd="douban"></a><a class="bds_bdhome" data-cmd="bdhome"></a><a class="bds_youdao" data-cmd="youdao"></a><a class="bds_fbook" data-cmd="fbook"></a><a class="bds_twi" data-cmd="twi"></a><a class="bds_more" data-cmd="more"></a><a class="bds_count" data-cmd="count"></a></div></div>';
 }
 
-function deel_avatar_default(){ 
+function deel_avatar_default(){
   return get_bloginfo('template_directory').'/img/default.png';
 }
 
@@ -272,12 +272,12 @@ function deel_avatar($avatar) {
   $f = substr($g, $tmp, strpos($g, "?", $tmp) - $tmp);
   $w = get_bloginfo('wpurl');
   $e = ABSPATH .'avatar/'. $f .'.png';
-  $t = dopt('d_avatarDate')*24*60*60; 
-  if ( !is_file($e) || (time() - filemtime($e)) > $t ) 
+  $t = dopt('d_avatarDate')*24*60*60;
+  if ( !is_file($e) || (time() - filemtime($e)) > $t )
 	copy(htmlspecialchars_decode($g), $e);
-  else  
+  else
 	$avatar = strtr($avatar, array($g => $w.'/avatar/'.$f.'.png'));
-  if ( filesize($e) < 500 ) 
+  if ( filesize($e) < 500 )
 	copy(get_bloginfo('template_directory').'/img/default.png', $e);
   return $avatar;
 }
@@ -336,7 +336,7 @@ function hide_admin_bar($flag) {
 
 //最新发布加new 单位'小时'
 function deel_post_new($timer='48'){
-  $t=( strtotime( date("Y-m-d H:i:s") )-strtotime( $post->post_date ) )/3600; 
+  $t=( strtotime( date("Y-m-d H:i:s") )-strtotime( $post->post_date ) )/3600;
   if( $t < $timer ) echo "<i>new</i>";
 }
 
@@ -484,11 +484,11 @@ function deel_comment_list($comment, $args, $depth) {
 	//信息
 	echo '<div class="c-meta">';
 		echo '<span class="c-author">'.get_comment_author_link().'</span>';
-		echo timeago( $comment->comment_date ); 
-		if ($comment->comment_approved !== '0'){ 
-			echo comment_reply_link( array_merge( $args, array('add_below' => 'div-comment', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); 
+		echo timeago( $comment->comment_date );
+		if ($comment->comment_approved !== '0'){
+			echo comment_reply_link( array_merge( $args, array('add_below' => 'div-comment', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) );
 		echo edit_comment_link(__('(编辑)'),' - ','');
-	  } 
+	  }
 	echo '</div>';
   echo '</div>';
 }
@@ -500,4 +500,21 @@ function mytheme_get_avatar($avatar) {
 }
 add_filter( 'get_avatar', 'mytheme_get_avatar', 10, 3 );
 
+function mylinks_set_title($args){
+    if(is_array($args)){
+        $args['title_li']='友情链接';
+    }
+	return $args;
+}
+
+add_filter('widget_links_args','mylinks_set_title');
+
+
+
+function myoption_siteurl() {
+	return SITE_URL;
+}
+
+add_filter('pre_option_siteurl','myoption_siteurl');
+add_filter('pre_option_home','myoption_siteurl');
 ?>

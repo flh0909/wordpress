@@ -9,11 +9,12 @@
 
                 include 'modules/recommend.php';
             ?>
-
+            <?php }?>
 
             <h2 class="title">本周热门</h2>
             <?php
-            $args_hot = array(
+                $hot_ids=array();
+                $args_hot = array(
 //                'orderby'=>'comment_count',
 //                //'showposts' => 2,
 //                'posts_per_page'=>4,
@@ -33,7 +34,7 @@
             query_posts($args_hot);
             ?>
             <ul class="week-hot clear">
-                <?php while (have_posts()) : the_post(); ?>
+                <?php while (have_posts()) : the_post(); array_push($hot_ids,$post->ID)?>
                     <li>
                         <div>
                             <a href="<?php the_permalink(); ?>" class="thumbnail"><?php deel_thumbnail(); ?></a>
@@ -51,9 +52,15 @@
                 <?php endwhile;
                 wp_reset_query(); ?>
             </ul>
-            <?php }?>
+
+
+
+
 
             <?php
+            // echo json_encode(get_option('sidebars_widgets'));
+            // echo json_encode($hot_ids);
+            // echo json_encode(get_option('sticky_posts'));
             if (dopt('d_adindex_03_b')) printf('<div class="banner banner-contenttop">' . dopt('d_adindex_03') . '</div>');
 
             if( $paged && $paged > 1 ){
@@ -69,7 +76,7 @@
                 'ignore_sticky_posts' => 1,
                  //'orderby'=>'comment_count',
                 'paged' => $paged,
-                'post__not_in' => get_option('sticky_posts')
+                'post__not_in' => array_merge(get_option('sticky_posts'),$hot_ids)
             );
             query_posts($args);
             include 'modules/excerpt.php';
