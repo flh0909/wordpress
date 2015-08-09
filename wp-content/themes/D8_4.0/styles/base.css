@@ -155,7 +155,7 @@ a:hover,a:focus{color: #8e60bb;text-decoration:none}
 .header{top:0;width:100%;z-index:999;margin-bottom:10px;height:140px;background-color: #fff;}
 .header-logo{background:url("img/header-logo.png") 0 0 no-repeat; width: 80px; height: 140px;margin-left:10px; }
 .header-name{padding:20px 0 0 30px; white-space: nowrap;}
-.header-name h1 a{color:#7B37AD;font-size:32px;padding-bottom:10px;}
+.header-name h1 a{color:#7B37AD;font-size:32px;padding-bottom:10px; text-shadow: 1px 1px 2px rgba(123, 55, 173, 0.53);}
 .header-name p{color:#999;}
 .header-name p a{color:#8e60bb;}
 .header-name p a:hover{ text-decoration: underline;}
