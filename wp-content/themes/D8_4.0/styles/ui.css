@@ -94,8 +94,8 @@
 .bdshare_t{line-height: 14px;overflow: hidden;height: 36px;}
 .bds_tools a{padding-left: 0;}
 .share{overflow:hidden}
-.share h5{float: left;line-height: 26px;margin-right: 10px;}
-.bdsharebuttonbox{float: left;}
+.share h5{float: left;line-height: 20px;margin-right: 10px;}
+.bdsharebuttonbox{float: left;margin-top:1px;}
 .share-tit{float:left;padding-top:15px}
 .pageheader .share{margin-top: -12px;}
 .article-footer .share{float: none;}
