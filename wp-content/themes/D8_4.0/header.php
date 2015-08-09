@@ -53,8 +53,8 @@
     $style = '';
     if (dopt('article_content_fontsize')) {
         $lineheight = '';
-        if (dopt('article_content_fontsize') == '16') $lineheight = 'line-height:27px;}.article-content p{margin:20px 0;';
-        $style .= '.article-content{font-size: ' . dopt('article_content_fontsize') . 'px;' . $lineheight . '}@media (max-width:640px){.article-content{font-size:16px}}';
+        //if (dopt('article_content_fontsize') == '16') $lineheight = 'line-height:27px;}.article-content p{margin:20px 0;';
+        //$style .= '.article-content{font-size: ' . dopt('article_content_fontsize') . 'px;' . $lineheight . '}@media (max-width:640px){.article-content{font-size:16px}}';
     }
     if (dopt('d_banner_show')) {
         $style .= '@media (max-width:767px){.banner{display:none}}';

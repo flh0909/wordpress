@@ -106,7 +106,7 @@
     .header .menu{margin-left: 0;margin-right: 0;padding:0;}
     .header-logo,
     .header-name{ display: none;}
-    input.search-input{width: 300px;}
+    input.search-input{width: 360px;}
     .header{position: relative; height: auto;}
 
     .relates li{float: none;width: 100%;}
@@ -155,7 +155,7 @@
     .children .comment.depth-2{margin-left: 10px;}
 
 
-    .recommend{padding:20px;}
+    .recommend{padding:20px 10px;}
     .recommend-top{float:none;margin:0 auto 15px;}
     .recommend-list{padding:0;}
 
@@ -163,18 +163,34 @@
 @media (max-width:480px){
     input.search-input{width: 220px;}
 
+    .article-header,
+    .article-content,
+    .article-footer,
+    .article-author
+    {padding:1px 10px 10px;}
 
+    .article-content{font-size:14px; line-height: 1.8em;}
+
+    .week-hot-title{height:auto;}
     .recommend-top a{width:auto;height:auto;max-width:100%;}
     .recommend-top a img{width:100%;height:auto;}
     .week-hot{height:auto; overflow: auto;padding:10px 0;}
     .week-hot li{width:100%;margin:10px auto;}
+    .week-hot li div{width:auto;padding:0 10px;}
     .week-hot li p{margin-bottom: 0;}
+    .week-hot .thumbnail img{width:100%;height:auto;}
 
     .title{padding: 6px 12px;}
     .navbar .btn.screen-nav{padding:  11px 12px;}
 
     .excerpt, .excerpt:hover{padding: 10px 12px;}
-    .excerpt .muted, .article-header .muted, .article-header .cate{margin-right: 12px;}
+    .excerpt .muted,
+    .article-header .muted,
+    .article-header .cate{margin-right: 12px;}
+
+    .excerpt .focus a img{width:100%;height:auto;max-width:none;max-height:none;}
+
+    .excerpt header{height:auto; white-space: normal; text-align: justify;}
 
     .breadcrumbs{display: none;}
 
