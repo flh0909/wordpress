@@ -64,7 +64,7 @@
             if (dopt('d_adindex_03_b')) printf('<div class="banner banner-contenttop">' . dopt('d_adindex_03') . '</div>');
 
             if( $paged && $paged > 1 ){
-            printf('<header class="archive-header"><h1>最新发布 第'.$paged.'页</h1><div class="archive-header-info"><p>'.get_option('blogname').get_option('blogdescription').'</p></div></header>');
+            printf('<header class="archive-header"><h1>最新发布 第'.$paged.'页</h1></header>');
             }else{
             #if (dopt('d_sticky_b')) include 'modules/sticky.php';
 
