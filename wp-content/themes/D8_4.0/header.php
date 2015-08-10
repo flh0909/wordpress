@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <title><?php wp_title('-', true, 'right');
         echo get_option('blogname');
-        if (is_home()) echo get_option('blogdescription');
+        if (is_home()) echo ' - '.get_option('blogdescription');
         if ($paged > 1) echo '-Page ', $paged; ?></title>
     <?php
     $sr_1 = 0;
@@ -84,10 +84,11 @@
     </div>
 </div>
 <header class="header">
-    <span class="header-logo pull-left"></span>
+    <a class="header-logo pull-left" href="/"></a>
     <div class="header-name pull-left">
         <h1><a href="<?php echo get_bloginfo('url')?>" title="<?php echo get_bloginfo('name') . '-' . get_bloginfo('description')?>"><?php echo get_bloginfo('name')?></a></h1>
-        <p><span><?php echo get_bloginfo('description')?>&nbsp;&nbsp;<a href="<?php echo get_bloginfo('url')?>"><?php echo get_bloginfo('url')?></a></span></p>
+        <p><span><?php echo get_bloginfo('description')?>&nbsp;&nbsp;<a href="/"><?php echo get_bloginfo('url')?></a></span></p>
+        <p class="bdsharebuttonbox"><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></p>
     </div>
     <div class="menu pull-right">
         <form method="get" class="dropdown search-form" action="<?php echo esc_url(home_url('/')); ?>">

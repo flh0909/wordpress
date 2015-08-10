@@ -23,7 +23,8 @@ small{font-size:85%}
 strong{font-weight:bold}
 em{font-style:italic}
 cite{font-style:normal}
-.muted{color:#999999}
+.muted,
+.muted a{color:#999999}
 a.muted:hover,a.muted:focus{color:#808080}
 .text-warning{color:#c09853}
 a.text-warning:hover,a.text-warning:focus{color:#a47e3c}
@@ -152,7 +153,7 @@ a:hover,a:focus{color: #8e60bb;text-decoration:none}
 .footer:after{display:table;content:"";line-height:0}
 .header:after,.container:after,.footer:after{clear:both}
 
-.header{top:0;width:100%;z-index:999;margin-bottom:10px;height:140px;background-color: #fff;}
+.header{top:0;width:100%;z-index:999;margin-top:32px; margin-bottom:10px;height:140px;background-color: #fff;}
 .header-logo{background:url("img/header-logo.png") 0 0 no-repeat; width: 80px; height: 140px;margin-left:10px; }
 .header-name{padding:20px 0 0 30px; white-space: nowrap;}
 .header-name h1 a{color:#7B37AD;font-size:32px;padding-bottom:10px; text-shadow: 1px 1px 2px rgba(123, 55, 173, 0.53);}

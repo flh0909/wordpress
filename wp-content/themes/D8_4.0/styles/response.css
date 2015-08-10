@@ -30,21 +30,24 @@
     .navbar .nav li:hover a,.navbar .nav li.current-menu-item a,.navbar .nav li.current-menu-parent a,.navbar .nav li.current_page_item a,.navbar .nav li.current-post-ancestor a,.navbar .nav li ul{background-color: #eee;color: #444;display: block;}
     .screen-search{display: none;}
 
-    .header{margin-bottom: 1px;}
+    .header{margin-bottom: 1px;margin-top:42px;}
     .footer-inner{border-left: none;}
     .article-tags{margin-bottom: 0;}
     .share{display: none;}
     .navbar .menu{float: none;margin: 15px 20px 10px;text-align: center;}
-    .search-form{float: none;display: inline-block;}
+
     .navbar .menu .btn-group{float: none;display: inline-block;margin-top: -24px;}
-    input.search-input{width: 500px;margin-bottom: 0;}
+
     .tag-clouds li{width: 50%;}
     .navbar .btn.screen-nav{padding: 11px 20px;height:auto;position: absolute;top: 0;left: 0;background-color: transparent;}
     .navbar .btn.screen-nav:hover{background-color: transparent;}
 
 
+    /*
+    .search-form{float: none;display: inline-block;}
+ input.search-input{width: 500px;margin-bottom: 0;}
     .header .menu{float: none;margin: 15px 20px 10px;text-align: center;}
-    .header .menu .btn-group{float: none;display: inline-block;margin-top: -24px;}
+    .header .menu .btn-group{float: none;display: inline-block;margin-top: -24px;}*/
 
     .article-content{font-size: 16px;}
 
@@ -106,7 +109,13 @@
     .header .menu{margin-left: 0;margin-right: 0;padding:0;}
     .header-logo,
     .header-name{ display: none;}
-    input.search-input{width: 360px;}
+
+    .search-form{float: none;display: inline-block;}
+    input.search-input{width: 360px;margin-bottom: 0;}
+    .header .menu{float: none;margin: 15px 20px 10px;text-align: center;}
+    .header .menu .btn-group{float: none;display: inline-block;margin-top: -24px;}
+
+
     .header{position: relative; height: auto;}
 
     .relates li{float: none;width: 100%;}

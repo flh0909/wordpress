@@ -14,7 +14,9 @@ if( has_post_thumbnail() || !dopt('d_thumbnail_b') ){
 ?>
 <article class="excerpt<?php echo !$_thumbnail ? ' excerpt-nothumbnail' : '' ?>">
 	<?php if( $_thumbnail ){ ?>
-	<div class="focus"><a href="<?php the_permalink(); ?>" class="thumbnail"><?php deel_thumbnail(); ?></a></div>
+	<div class="focus"><a href="<?php the_permalink(); ?>" class="thumbnail"><?php deel_thumbnail(); ?>
+		<span class="views" style="display: none;"><?php deel_views('浏览'); ?></span>
+		</a></div>
 	<?php } ?>
 	<header>
 		<?php  
@@ -28,14 +30,14 @@ if( has_post_thumbnail() || !dopt('d_thumbnail_b') ){
 		<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?> - <?php bloginfo('name'); ?>"><?php the_title(); ?></a></h2>
 	</header>
 	<p>
-	<?php if( !is_author() && !$_author ){ ?>
-		<span class="muted"><i class="icon-user icon12"></i> <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ) ?>"><?php echo get_the_author() ?></a></span>
-	<?php } ?>
-	<?php if( !$_time ){ ?><span class="muted"><i class="icon-time icon12"></i> <?php echo timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ) ?></span><?php } ?>
+	<?php if( !$_time ){ ?><span class="muted"><i class="icon-time icon12"></i> <?php echo get_the_time('Y年m月d日 G:i:s') ?></span><?php } ?>
 	<?php if( !$_views ){ ?><span class="muted"><i class="icon-eye-open icon12"></i> <?php deel_views('浏览'); ?></span><?php } ?>
 	<?php if( !$_comment ){ ?><span class="muted"><i class="icon-comment icon12"></i> <?php 
 			if ( comments_open() ) echo '<a href="'.get_comments_link().'">'.get_comments_number('0', '1', '%').'评论</a>';
-		?></span></p><?php } ?>
+		?></span><?php } ?>
+
+		<?php if(has_tag()){?> <span class="muted"><i class="icon-tags icon12"></i> <?php the_tags('');?></span><?php }?>
+	</p>
 	<p class="note">
 		<?php 
 		if( !post_password_required() ){

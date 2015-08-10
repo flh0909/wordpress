@@ -129,7 +129,7 @@
         /* append body code
          * ====================================================
          */
-        $('body').append('<div class="modal hide fade" id="feed" tabindex="-1" style="width:400px;margin-left:-200px;"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h3>订阅'+_deel.name+'</h3></div><div class="modal-body"><p><strong>订阅地址</strong><br><input type="text" class="input-block-level" value="'+_deel.rss+'" readonly=""></p>'+(_deel.maillist?'<p><form class="subscribe-mail" action="http://list.qq.com/cgi-bin/qf_compose_send" target="_blank" method="post"><input type="hidden" name="t" value="qf_booked_feedback"><input type="hidden" name="id" value="'+_deel.maillistCode+'"><strong>邮件订阅</strong><br><div class="form-inline clearfix"><input class="pull-left" style="width:300px;" id="to" name="to" type="email" placeholder="a@b.com"><input class="btn btn-primary pull-right" style="width:51px;" type="submit" value="订阅"></div></form></p>':'')+'</div></div><div class="rollto"><button class="btn btn-inverse" data-type="totop" title="回顶部"><i class="icon-eject icon-white"></i></button>'+(_deel.commenton?'<button class="btn btn-inverse" data-type="torespond" title="发评论"><i class="icon-comment icon-white"></i></button>':'')+'</div>')
+        $('body').append('<div class="modal hide fade" id="feed" tabindex="-1" style="width:400px;margin-left:-200px;"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h3>订阅'+_deel.name+'</h3></div><div class="modal-body"><p><strong>订阅地址</strong><br><input type="text" class="input-block-level" value="'+_deel.rss+'" readonly=""></p>'+(_deel.maillist?'<p><form class="subscribe-mail" action="http://list.qq.com/cgi-bin/qf_compose_send" target="_blank" method="post"><input type="hidden" name="t" value="qf_booked_feedback"><input type="hidden" name="id" value="'+_deel.maillistCode+'"><strong>邮件订阅</strong><br><div class="form-inline clearfix"><input class="pull-left" style="width:300px;" id="to" name="to" type="email" placeholder="a@b.com"><input class="btn btn-primary pull-right" style="width:51px;" type="submit" value="订阅"></div></form></p>':'')+'</div></div><div class="rollto"><button class="btn " data-type="totop" title="返回顶部">返回<br/>顶部</button>'+(_deel.commenton?'<button class="btn " data-type="torespond" title="发表评论">发表<br/>评论</button>':'')+'</div>')
 
 
         /* after feed show
@@ -164,8 +164,10 @@
                 scrollTo()
 
                 break; case 'torespond':
-                scrollTo('#respond')
-                $('#comment').focus()
+                //scrollTo('#respond')
+                scrollTo('.ds-replybox')
+                //$('#comment').focus()
+                $('.ds-textarea-wrapper textarea').focus()
 
                 case 'comment-insert-smilie':
                     if( !$('#comment-smilies').length ){
