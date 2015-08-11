@@ -460,9 +460,11 @@ pre.prettyprint.linenums ol li {
 .recommend-top a{ position: relative; display: block;width:330px;height:225px;margin: 0 auto;}
 .recommend-top a img{ width: 330px; height: 225px; vertical-align: top;}
 .recommend-top a span{position:absolute;line-height:20px;padding:5px 10px;bottom:0;left:0; background-color: rgba(0, 0, 0, 0.50);font-size:14px;color:#fff;right:0; overflow: hidden;}
+.recommend-top a:hover span{color:#eee;}
 .recommend-list{padding:0 20px;margin-top:-2px;box-sizing:border-box;}
 .recommend-list li{padding:0 0 5px;}
 .recommend-list a{ font-size:16px; line-height: 20px; max-width: 100%;color:#333;padding-bottom:5px;}
+.recommend-list a:hover{color:#7B37AD;}
 .recommend-list p{}
 
 

@@ -75,6 +75,7 @@
             $args = array(
                 'ignore_sticky_posts' => 1,
                  //'orderby'=>'comment_count',
+                'posts_per_page'=>10,
                 'paged' => $paged,
                 'post__not_in' => array_merge(get_option('sticky_posts'),$hot_ids)
             );

@@ -169,6 +169,9 @@ function deel_paging() {
     echo '<li class="next-page">'; next_posts_link('下一页'); echo '</li>';
     // echo '<li><span>共 '.$max_page.' 页</span></li>';
     echo '</ul></div>';
+
+
+	echo '<div style="border:dashed 1px #666;padding:5px;word-wrap:break-word;">总共：'.$wp_query->found_posts.'条<br/>总页数：'.$max_page.'<br/>'.json_encode($wp_query->query_vars).'</div>';
 }
 function p_link( $i, $title = '' ) {
     if ( $title == '' ) $title = "第 {$i} 页";
@@ -257,7 +260,13 @@ add_action('login_head', 'custom_login');   */
 
 
 function deel_share(){
-  echo '<div class="share"><h5>分享到 </h5><div class="bdsharebuttonbox"><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_tsohu" data-cmd="tsohu" title="分享到搜狐微博"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_bdhome" data-cmd="bdhome" title="分享到百度新首页"></a><a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_more" data-cmd="more"></a></div></div>';
+  echo '<div class="share"><h5>分享到 </h5><div class="bdsharebuttonbox">
+<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+<a href="#" class="bds_more" data-cmd="more"></a>
+<a class="bds_count" data-cmd="count"></a></div></div>';
 }
 
 function deel_avatar_default(){
@@ -431,7 +440,7 @@ function deel_copyright($content) {
 		if( $show ){
 			$content.= '<p>来源：'.$show.'</p>';
 		}
-		$content.= '<p>转载请注明：<a href="'.get_bloginfo('url').'">'.get_bloginfo('name').'</a> &raquo; <a href="'.get_permalink().'">'.get_the_title().'</a></p>';
+		$content.= '<p>转载请注明：<a href="'.get_bloginfo('url').'">'.get_bloginfo('name').'</a> - '.get_bloginfo('url').'</p>';
 	}
 	return $content;
 }
