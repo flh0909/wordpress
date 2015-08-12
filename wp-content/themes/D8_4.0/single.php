@@ -9,7 +9,7 @@
 
 				<time class="muted"><i class="ico icon-time icon12"></i> <?php echo get_the_time('Y-m-d G:i:s')?></time>
 				<span class="muted"><i class="ico icon-eye-open icon12"></i> <?php deel_views('浏览'); ?></span>
-				<?php if ( comments_open() ) echo '<span class="muted"><i class="icon-comment icon12"></i> <a href="'.get_comments_link().'">'.get_comments_number('去', '1', '%').'评论</a></span>'; ?>
+				<?php if ( comments_open() ) echo '<span class="muted"><i class="icon-comment icon12"></i> <a href="'.get_comments_link().'">'.get_comments_number('0', '1', '%').'评论</a></span>'; ?>
 				<?php edit_post_link('[编辑]'); ?>
 			</div>
 			<?php deel_share(); ?>
@@ -29,8 +29,8 @@
 		</footer>
 
 		<nav class="article-nav">
-			<span class="article-nav-prev"><?php previous_post_link('上一篇 %link'); ?></span>
-			<span class="article-nav-next"><?php next_post_link('%link 下一篇'); ?></span>
+			<div class="article-nav-prev"><?php previous_post_link('上一篇： %link'); ?></div>
+			<div class="article-nav-next"><?php next_post_link('下一篇： %link'); ?></div>
 		</nav>
 
 		<div class="relates">

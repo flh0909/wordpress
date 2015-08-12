@@ -64,7 +64,7 @@
         $style .= '.navbar .logo{width:' . dopt('d_logo_w') . 'px}@media (max-width: 979px){.navbar .logo{width:100%}}';
     }
     if (dopt('d_navfix')) {
-        $style .= 'body{margin-top: 52px}.navbar-wrap{position:fixed}@media (max-width: 979px){body{margin-top: 0}.navbar-wrap{position:relative}}';
+        $style .= 'body{margin-top: 32px}.navbar-wrap{position:fixed}@media (max-width: 979px){body{margin-top: 0}.navbar-wrap{position:relative}}';
     }
     echo '<style>' . $style . '</style>';
     ?>

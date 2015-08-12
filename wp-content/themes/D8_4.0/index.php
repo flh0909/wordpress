@@ -14,18 +14,11 @@
             <?php
                 $hot_ids=array();
                 $args_hot = array(
-//                'orderby'=>'comment_count',
-//                //'showposts' => 2,
-//                'posts_per_page'=>4,
-//                'paged'=>1,
-//                'date_query' => array(
-//                    'after' => date('Y-m-d H:i:s', time() - 60 * 60 * 24 * 7)
-//                )
                 'ignore_sticky_posts' => 1,
-                'orderby'=>'meta_value',
                     'meta_key'=>'views',
-                'posts_per_page'=>3,
-                'paged' => 1,
+                    'orderby'=>'meta_value_num',
+//                    'orderby'=> 'comment_count',
+                'showposts'=>3,
                 'post__not_in' => get_option('sticky_posts'),
                 'date_query' => array(
                     'after' => date('Y-m-d H:i:s', time() - 60 * 60 * 24 * 7)

@@ -1,4 +1,4 @@
-<ul>
+<ul class="week-hot week-hot-about clear">
 <?php  
 $exclude_id = $post->ID; 
 $posttags = get_the_tags(); 
@@ -15,8 +15,22 @@ if ( $posttags ) {
 		'posts_per_page' => $limit
 	);
 	query_posts($args); 
-	while( have_posts() ) { the_post();
-		echo '<li><a href="'.get_permalink().'">', get_the_title(), '</a></li>';
+	while( have_posts() ) { the_post();?>
+		<li>
+			<div>
+				<a href="<?php the_permalink(); ?>" class="thumbnail"><?php deel_thumbnail(); ?></a>
+				<a href="<?php the_permalink() ?>" class="week-hot-title" title="<?php the_title(); ?> - <?php bloginfo('name'); ?>"><?php the_title(); ?></a>
+
+				<p>
+					<span class="muted"><i class="icon-eye-open icon12"></i> <?php deel_views('浏览'); ?></span>
+    <span class="muted"><i class="icon-comment icon12"></i> <?php
+		if (comments_open()) echo '<a href="' . get_comments_link() . '">' . get_comments_number('0', '1', '%') . '评论</a>';
+		?></span>
+				</p>
+			</div>
+
+		</li>
+		<?php
 		$exclude_id .= ',' . $post->ID; $i ++;
 	};
 	wp_reset_query();
@@ -31,8 +45,22 @@ if ( $i < $limit ) {
 		'posts_per_page' => $limit - $i
 	);
 	query_posts($args);
-	while( have_posts() ) { the_post();
-		echo '<li><a href="'.get_permalink().'">', get_the_title(), '</a></li>';
+	while( have_posts() ) { the_post();?>
+		<li>
+			<div>
+				<a href="<?php the_permalink(); ?>" class="thumbnail"><?php deel_thumbnail(); ?></a>
+				<a href="<?php the_permalink() ?>" class="week-hot-title" title="<?php the_title(); ?> - <?php bloginfo('name'); ?>"><?php the_title(); ?></a>
+
+				<p>
+					<span class="muted"><i class="icon-eye-open icon12"></i> <?php deel_views('浏览'); ?></span>
+    <span class="muted"><i class="icon-comment icon12"></i> <?php
+		if (comments_open()) echo '<a href="' . get_comments_link() . '">' . get_comments_number('0', '1', '%') . '评论</a>';
+		?></span>
+				</p>
+			</div>
+
+		</li>
+		<?php
 		$i ++;
 	};
 	wp_reset_query();

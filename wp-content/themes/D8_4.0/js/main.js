@@ -27,7 +27,7 @@
                 "share":{},
                 "image":{
                     tag: 'bdshare',
-                    "viewList":["qzone","tsina","tqq","renren","weixin"],
+                    "viewList":["tsina","weixin","tqq","qzone"],
                     "viewText":" ",
                     "viewSize":"16"
                 }/*,

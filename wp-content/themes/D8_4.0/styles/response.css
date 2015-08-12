@@ -32,7 +32,7 @@
     .navbar .nav li:hover a,.navbar .nav li.current-menu-item a,.navbar .nav li.current-menu-parent a,.navbar .nav li.current_page_item a,.navbar .nav li.current-post-ancestor a,.navbar .nav li ul{background-color: #eee;color: #444;display: block;}
     .screen-search{display: none;}
 
-    .header{margin-bottom: 1px;margin-top:42px;}
+    /*.header{margin-bottom: 1px;margin-top:42px;}*/
     .footer-inner{border-left: none;}
     .article-tags{margin-bottom: 0;}
     .share{display: none;}
@@ -102,6 +102,8 @@
     .week-hot{height:275px; overflow: hidden;}
     .week-hot li{width:50%;}
 
+    .week-hot-about{height:auto;}
+
     .pagecontent{margin-left: 0;}
     .pagesidebar{display: none;}
     .speedbar{display: none;}
@@ -120,9 +122,9 @@
 
     .header{position: relative; height: auto;}
 
-    .relates li{float: none;width: 100%;}
+    /*.relates li{float: none;width: 100%;}
     .relates a{height: auto;padding: 0 20px 12px;text-align: left;line-height: 14px;border-left: none;}
-    .relates li img{display: none;}
+    .relates li img{display: none;}*/
     .article-footer .share{float: none;clear: both;}
     .article-nav span{float: none;}
     .page-sidebar{display: none;}
@@ -186,9 +188,8 @@
     .recommend-top a{width:auto;height:auto;max-width:100%;}
     .recommend-top a img{width:100%;height:auto;}
     .week-hot{height:auto; overflow: auto;padding:10px 0;}
-    .week-hot li{width:100%;margin:10px auto;}
-    .week-hot li div{width:auto;padding:0 10px;}
-    .week-hot li p{margin-bottom: 0;}
+    .week-hot li{width:100%;margin:0 auto;}
+    .week-hot li div{width:auto;}
     .week-hot .thumbnail img{width:100%;height:auto;}
 
     .title{padding: 6px 12px;}
@@ -208,8 +209,8 @@
     .article-header h1{line-height: 30px;font-weight: bold;padding-top: 10px;}
     .article-header i{display: none;}
 
-    .relates li{overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
-    .relates a{background: none;padding-left: 0;}
+    /*.relates li{overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+    .relates a{background: none;padding-left: 0;}*/
 
     #submit .icon-ok-circle{display: none;}
 

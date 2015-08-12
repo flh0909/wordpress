@@ -148,14 +148,14 @@
 .article-content pre,.comment pre{margin:20px 0;font:12px/20px 'courier new';background:#4A4A4A;padding:10px 20px;color:#F8F8D4;border-radius:0;border:none}
 .article-content blockquote{margin:15px auto;border:1px solid #D6E9C6;border-left-width:3px;padding:10px 15px 5px;background-color:#F4FFEF;font-size:12px;line-height: 20px}
 .article-content blockquote p{margin:0;padding:0;margin-bottom:5px;font-size:12px;line-height: 20px}
-.article-nav{border-top:1px solid #f2f2f2;background-color:#FBFBFB;overflow:hidden;padding:15px 20px;font-size:14px;color:#bbb}
-.article-nav span{float:left;position:relative}
-.article-nav span.article-nav-next{float:right;text-align:right}
-.relates{overflow:hidden;background-color:#fff;border-top:1px solid #F2F2F2;margin-bottom: 10px;}
-.relates h3{font-size:15px;line-height: 15px;border-bottom:1px dotted #e4e4e4;padding:15px 20px 10px;margin-bottom: 0}
-.relates ul{padding: 15px 0 15px 20px;overflow: hidden;font-size: 14px;}
+.article-nav{border-top:1px solid #f2f2f2;background-color:#FBFBFB;overflow:hidden;padding:13px 20px;font-size:14px;color:#bbb; line-height: 24px;}
+/*.article-nav span{float:left;position:relative}
+.article-nav span.article-nav-next{float:right;text-align:right}*/
+.relates{overflow:hidden;background-color:#fff;border-top:1px solid #F2F2F2;margin-bottom: 10px; }
+.relates h3{font-size:15px;line-height: 15px;border-bottom:1px dotted #e4e4e4;padding:15px 20px;margin: 0;font-weight:bold;}
+/*..relates ul{padding: 15px 0 15px 20px;overflow: hidden;font-size: 14px;}
 .relates li{float:left;width:50%;height: 30px;overflow: hidden;line-height: 30px;}
-.relates a{margin-right: 20px;background:url(data:image/gif;base64,R0lGODlhDQAFAKIAAKOjo6GhoampqYSEhJWVlZ2dnZmZmXx8fCH5BAAAAAAALAAAAAANAAUAAAMVKLfcB6PIScsZJuttLvlgSByK4wQJADs=) no-repeat 2px 9px;padding-left:24px;}
+.relates a{margin-right: 20px;background:url(data:image/gif;base64,R0lGODlhDQAFAKIAAKOjo6GhoampqYSEhJWVlZ2dnZmZmXx8fCH5BAAAAAAALAAAAAANAAUAAAMVKLfcB6PIScsZJuttLvlgSByK4wQJADs=) no-repeat 2px 9px;padding-left:24px;}*/
 .rowpage{position:relative;background-color:#fff;padding:0 20px}
 .rowpage-header{border-bottom:1px solid #eee;line-height:16px;height:31px;padding:8px 20px;margin:0 -20px 20px;background-color:#fbfbfb}
 .page-title{font-size:16px;margin:0;padding:0}
@@ -447,12 +447,15 @@ pre.prettyprint.linenums ol li {
 .clear{}
 .clear:after{display: block;font-size:0; visibility: hidden; overflow: hidden; clear: both; height: 0; content: "";}
 .week-hot{ background-color: #fff;padding:0 10px;margin-bottom:10px;}
-.week-hot li{float:left;width:33.333333%; text-align: center;margin:20px auto;}
-.week-hot li div{width:220px;margin:0 auto; text-align: left;; }
+.week-hot li{float:left;width:33.333333%; text-align: center;margin:10px auto;}
+.week-hot li div{width:220px;margin:0 auto; text-align: left;padding:10px; }
+.week-hot li:hover div{ background-color: #FBF5FF;}
+.week-hot li p{margin:0;}
 .week-hot .thumbnail{}
 .week-hot .thumbnail img{width:220px;height:150px;}
 .week-hot-title{font-size:14px; line-height: 20px;height:40px; overflow: hidden; display: inline-block; padding-top: 10px;}
 
+.week-hot-about{margin-bottom:0;}
 
 /*今日推荐*/
 .recommend{background-color: #fff;padding:20px 0 20px 350px; margin-bottom: 10px;}
