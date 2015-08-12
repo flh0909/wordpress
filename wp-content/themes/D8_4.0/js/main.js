@@ -103,7 +103,7 @@
                             if( _deel.roll[0]!==_deel.roll[1] )
                                 rollbox.eq(_deel.roll[1]-1).clone().appendTo('.widgetRoller')
                             var toper = 10;
-                            if($('.navbar-wrap').css('position')=='fixed') toper = 62;
+                            if($('.navbar-wrap').css('position')=='fixed') toper = 42;
                             $('.widgetRoller').css({position:'fixed',top:toper,zIndex:0,width:360});
                         }else{
                             $('.widgetRoller').fadeIn(300);

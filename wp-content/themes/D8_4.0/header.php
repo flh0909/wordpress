@@ -45,6 +45,7 @@
     wp_enqueue_style('form', get_stylesheet_directory_uri().'/styles/form.css', array(), '3.0');
     wp_enqueue_style('icon', get_stylesheet_directory_uri().'/styles/icon.css', array(), '3.0');
     wp_enqueue_style('components', get_stylesheet_directory_uri().'/styles/components.css', array(), '3.0');
+    wp_enqueue_style('widget', get_stylesheet_directory_uri().'/styles/widget.css', array(), '3.0');
     wp_enqueue_style('ui', get_stylesheet_directory_uri().'/styles/ui.css', array(), '3.0');
     wp_enqueue_style('response', get_stylesheet_directory_uri().'/styles/response.css', array(), '3.0');
 
@@ -91,12 +92,14 @@
 <!--        <p class="bdsharebuttonbox"><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></p>-->
     </div>
     <div class="menu pull-right">
-        <form method="get" class="dropdown search-form" action="<?php echo esc_url(home_url('/')); ?>">
-            <input class="search-input" name="s" type="text" placeholder="输入关键字搜索"<?php if (is_search()) {
+        <div class="top-search">
+            <form method="get" class="dropdown search-form" action="<?php /*echo esc_url(home_url('/')); */?>">
+                <input class="search-input" name="s" type="text" placeholder="输入关键字搜索"<?php /*if (is_search()) {
                 echo ' value="' . htmlspecialchars($s) . '"';
-            } ?> x-webkit-speech=""><input class="btn btn-success search-submit" type="submit" value="搜索">
-            <ul class="dropdown-menu search-suggest"></ul>
-        </form>
+            } */?> x-webkit-speech=""><input class="btn btn-success search-submit" type="submit" value="搜索">
+                <ul class="dropdown-menu search-suggest"></ul>
+            </form>
+        </div>
         <div class="btn-group pull-left">
             <?php if (dopt('d_tqq_b') || dopt('d_weibo_b') || dopt('d_facebook_b') || dopt('d_twitter_b')) { ?>
                 <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">关注 <i class="caret"></i></button>

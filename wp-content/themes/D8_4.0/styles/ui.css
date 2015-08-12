@@ -468,6 +468,24 @@ pre.prettyprint.linenums ol li {
 .recommend-list p{}
 
 
+/*搜索框*/
+.widget_search{}
+.widget_search{ height: 30px; overflow: hidden; padding:10px;}
+.widget_search input{ display: table-cell;}
+.widget_search .search-input{width:278px;}
+.widget_search .search-form{margin:0;}
 
+
+.top-search{ display: none;}
+.search-form{float:left;margin:0 5px 0 0}
+.search-submit{float:left}
+
+input.search-input{float:left;color:#bbb;border:solid 1px #8e60bb;width:160px;}
+input.search-input:hover,
+input.search-input:focus{color:#444;border-color:#7B37AD}
+
+.search-suggest.dropdown-menu > li > a{padding:4px 7px 3px}
+.search-suggest span{float:right;color:#999}
+.search-suggest .active span{color:#fff}
 
 

@@ -162,6 +162,9 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .tabs-right > .nav-tabs > li > a{margin-left:-1px;border-radius:0 4px 4px 0}
 .tabs-right > .nav-tabs > li > a:hover,.tabs-right > .nav-tabs > li > a:focus{border-color:#eeeeee #eeeeee #eeeeee #dddddd}
 .tabs-right > .nav-tabs .active > a,.tabs-right > .nav-tabs .active > a:hover,.tabs-right > .nav-tabs .active > a:focus{border-color:#ddd #ddd #ddd transparent;*border-left-color:#ffffff}
+
+
+/*导航*/
 .nav > .disabled > a{color:#999999}
 .nav > .disabled > a:hover,.nav > .disabled > a:focus{text-decoration:none;background-color:transparent;cursor:default}
 .navbar-wrap{position:fixed;height:32px; top:0;margin: 0 auto;left: 0;right: 0;z-index: 1000;background-color:#8e60bb;}
@@ -208,15 +211,6 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .navbar .dropdown-menu.pull-right .dropdown-menu{left:auto;right:100%;margin-left:0;margin-right:-1px}
 .navbar .menu{margin-right:20px;margin-top:11px}
 
-
-.search-form{float:left;margin:0 5px 0 0}
-input.search-input{float:left;color:#bbb;border:solid 1px #8e60bb;width:160px;}
-input.search-input:hover,
-input.search-input:focus{color:#444;border-color:#7B37AD}
-.search-submit{float:left}
-.search-suggest.dropdown-menu > li > a{padding:4px 7px 3px}
-.search-suggest span{float:right;color:#999}
-.search-suggest .active span{color:#fff}
 .breadcrumb{padding:8px 15px;margin:0 0 20px;list-style:none;background-color:#f5f5f5;border-radius:2px}
 .breadcrumb > li{display:inline-block;*display:inline;*zoom:1;text-shadow:0 1px 0 #ffffff}
 .breadcrumb > li > .divider{padding:0 5px;color:#ccc}

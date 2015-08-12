@@ -1,7 +1,9 @@
 @media (max-width:1024px){
+    .top-search{ display: block;}
     .sidebar{display: none;}
     .content{margin-right: 0;}
     .container{width:100%;}
+
 }
 
 

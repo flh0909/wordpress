@@ -5,8 +5,7 @@
 
             <?php
             if( $paged && $paged > 1 ){}else{
-                // if (dopt('d_sticky_b')) include 'modules/sticky.php';
-
+                 //if (dopt('d_sticky_b')) include 'modules/sticky.php';
                 include 'modules/recommend.php';
             ?>
             <?php }?>
@@ -23,7 +22,8 @@
 //                    'after' => date('Y-m-d H:i:s', time() - 60 * 60 * 24 * 7)
 //                )
                 'ignore_sticky_posts' => 1,
-                'orderby'=>'comment_count',
+                'orderby'=>'meta_value',
+                    'meta_key'=>'views',
                 'posts_per_page'=>3,
                 'paged' => 1,
                 'post__not_in' => get_option('sticky_posts'),
@@ -76,8 +76,8 @@
                 'ignore_sticky_posts' => 1,
                  //'orderby'=>'comment_count',
                 'posts_per_page'=>10,
-                'paged' => $paged,
-                'post__not_in' => array_merge(get_option('sticky_posts'),$hot_ids)
+                'paged' => $paged//,
+                //'post__not_in' => array_merge(get_option('sticky_posts'),$hot_ids)
             );
             query_posts($args);
             include 'modules/excerpt.php';
