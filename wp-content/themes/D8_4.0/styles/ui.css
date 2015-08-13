@@ -476,7 +476,7 @@ pre.prettyprint.linenums ol li {
 .widget_search{}
 .widget_search{ height: 40px; overflow: hidden; padding:20px;}
 .widget_search input{ display: table-cell;font-size:14px;}
-.widget_search .search-input{width:214px;padding:7px 6px 7px;border-color:#F7F7F7; background-color: #F7F7F7;}
+.widget_search .search-input{width:206px;padding:7px 6px 7px;border-color:#F7F7F7; background-color: #F7F7F7;}
 .widget_search .search-form{margin:0;}
 .widget_search .search-submit{padding:8px 32px;}
 
@@ -485,9 +485,9 @@ pre.prettyprint.linenums ol li {
 .search-form{float:left;margin:0 5px 0 0}
 .search-submit{float:left}
 
-input.search-input{float:left;color:#bbb;border:solid 1px #8e60bb;width:160px;}
+input.search-input{float:left;color:#bbb;border:solid 1px #F7F7F7;width:160px; background-color: #F7F7F7;}
 input.search-input:hover,
-input.search-input:focus{color:#444;border-color:#7B37AD}
+input.search-input:focus{color:#444;border-color:#8E60BA}
 
 .search-suggest.dropdown-menu > li > a{padding:4px 7px 3px}
 .search-suggest span{float:right;color:#999}
