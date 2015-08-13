@@ -60,6 +60,8 @@ function deel_setup(){
 	add_theme_support('post-thumbnails');
 	set_post_thumbnail_size(220, 150, true);
 
+	//add_theme_support( 'post-formats', array( 'aside', 'gallery' ,'image') );
+
 	add_editor_style('editor-style.css');
 
 	//头像缓存
@@ -539,7 +541,6 @@ function add_editor_buttons($buttons) {
 	$buttons[] = 'copy';
 	$buttons[] = 'paste';
 	$buttons[] = 'cut';
-	$buttons[] = 'undo';
 	$buttons[] = 'image';
 	$buttons[] = 'anchor';
 	$buttons[] = 'backcolor';
@@ -549,5 +550,9 @@ function add_editor_buttons($buttons) {
 }
 add_filter("mce_buttons_3", "add_editor_buttons");
 
-
+function customize_text_sizes($initArray){
+	$initArray['fontsize_formats'] = "12px 13px 14px 15px 16px 18px 20px 22px 24px 26px 28px 30px 32px 34px 36px 38px 42px 44px 46px 48px";
+	return $initArray;
+}
+add_filter('tiny_mce_before_init', 'customize_text_sizes');
 ?>

@@ -107,7 +107,7 @@
 .article-title a{color: #444;}
 .article-content{font-size:14px;line-height:25px;word-break:break-all;word-wrap:break-word;padding-bottom:5px}
 .article-content h3,.article-content h4�� .article-content h5{border-bottom:#eee 1px solid;padding-bottom:5px;margin-bottom:20px}
-.article-content h2{font-size:18px;font-weight:normal;margin:20px -20px 20px -24px;padding:10px 20px 9px 20px;line-height:18px;border-left:4px solid #428BCA;background-color:#fbfbfb}
+.article-content h2{font-size:18px;font-weight:normal;margin:20px -20px 20px -20px;padding:10px 20px 9px 20px;line-height:18px;border-left:4px solid #8E60BB;background-color:#fbfbfb}
 .article-content h3{font-size:16px}
 .article-content h4{font-size:14px}
 .article-content h5{font-size:12px}
@@ -474,10 +474,11 @@ pre.prettyprint.linenums ol li {
 
 /*搜索框*/
 .widget_search{}
-.widget_search{ height: 30px; overflow: hidden; padding:10px;}
-.widget_search input{ display: table-cell;}
-.widget_search .search-input{width:278px;}
+.widget_search{ height: 40px; overflow: hidden; padding:20px;}
+.widget_search input{ display: table-cell;font-size:14px;}
+.widget_search .search-input{width:214px;padding:7px 6px 7px;border-color:#F7F7F7; background-color: #F7F7F7;}
 .widget_search .search-form{margin:0;}
+.widget_search .search-submit{padding:8px 32px;}
 
 
 .top-search{ display: none;}
