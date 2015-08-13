@@ -215,10 +215,10 @@ function deel_views($after=''){
 endif;
 
 if ( ! function_exists( 'deel_thumbnail' ) ) :
-function deel_thumbnail() {
+function deel_thumbnail($size = 'post-thumbnail') {
 	global $post;
 	if ( has_post_thumbnail() ) {
-		$domsxe = simplexml_load_string(get_the_post_thumbnail());
+		$domsxe = simplexml_load_string(get_the_post_thumbnail(null,$size));
 		$thumbnailsrc = $domsxe->attributes()->src;
 		echo '<img src="'.$thumbnailsrc.'" alt="'.trim(strip_tags( $post->post_title )).'" />';
 	} else {

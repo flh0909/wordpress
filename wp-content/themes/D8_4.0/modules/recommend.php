@@ -18,6 +18,7 @@
     <ul class="recommend-list ">
         <?php } else { ?>
             <li>
+                <a href="<?php the_permalink() ?>" title="<?php the_title(); ?> - <?php bloginfo('name'); ?>"><?php deel_thumbnail("thumbnail"); ?></a>
                 <a class="text-overflow" href="<?php the_permalink() ?>" title="<?php the_title(); ?> - <?php bloginfo('name'); ?>"><?php the_title(); ?></a>
                 <p class="muted"><?php echo deel_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 48, '...')?></p>
             </li>
