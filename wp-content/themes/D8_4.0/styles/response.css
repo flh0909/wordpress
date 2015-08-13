@@ -111,8 +111,9 @@
     .sticky li{width:100%;}
     .navbar .menu{margin-left: 0;margin-right: 0;}
     .header .menu{margin-left: 0;margin-right: 0;padding:0;}
-    .header-logo,
     .header-name{ display: none;}
+
+    .header-logo{width:40px;height:70px;}
 
     .search-form{float: none;display: inline-block;}
     input.search-input{width: 360px;margin-bottom: 0;}
@@ -150,7 +151,7 @@
 
 }
 @media (max-width:640px){
-    input.search-input{width: 360px;}
+    input.search-input{width: 330px;}
 
 
 
@@ -174,7 +175,7 @@
 
 }
 @media (max-width:480px){
-    input.search-input{width: 220px;}
+    input.search-input{width: 160px;}
 
     .article-header,
     .article-content,

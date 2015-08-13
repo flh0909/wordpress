@@ -154,7 +154,7 @@ a:hover,a:focus{color: #8e60bb;text-decoration:none}
 .header:after,.container:after,.footer:after{clear:both}
 
 .header{top:0;width:100%;z-index:999; margin-bottom:10px;height:140px;background-color: #fff;}
-.header-logo{background:url("img/header-logo.jpg") 0 0 no-repeat; width: 80px; height: 140px;margin-left:10px; filter:alpha(opacity=85);-moz-opacity:0.85; opacity: 0.85;}
+.header-logo{background:url("img/header-logo.jpg") 0 0 no-repeat; width: 80px; height: 140px;margin-left:10px; filter:alpha(opacity=85);-moz-opacity:0.85; opacity: 0.85;background-size:contain;}
 .header-logo:hover{filter:alpha(opacity=100);-moz-opacity:1; opacity:1;}
 .header-name{padding:20px 0 0 30px; white-space: nowrap;}
 .header-name h1 a{color:#7B37AD;font-size:32px;padding-bottom:10px; text-shadow: 1px 1px 2px rgba(123, 55, 173, 0.53);}
