@@ -86,8 +86,8 @@
 .queryinfo{padding-bottom:6px}
 .bdshare_t{line-height: 14px;overflow: hidden;height: 36px;}
 .bds_tools a{padding-left: 0;}
-.share{overflow:hidden}
-.share h5{float: left;line-height: 20px;margin-right: 10px;}
+.share{overflow:hidden;padding-top:5px;}
+.share h5{float: left;line-height: 20px;font-size: 20px;color: #7B37AD;font-weight: normal;margin: 5px 5px 5px 0;}
 .bdsharebuttonbox{float: left;margin-top:1px;}
 .share-tit{float:left;padding-top:15px}
 .pageheader .share{margin-top: -12px;}
@@ -475,17 +475,18 @@ pre.prettyprint.linenums ol li {
 /*搜索框*/
 .widget_search{}
 .widget_search{ height: 40px; overflow: hidden; padding:20px;}
-.widget_search input{ display: table-cell;font-size:14px;}
-.widget_search .search-input{width:206px;padding:7px 6px 7px;border-color:#F7F7F7; background-color: #F7F7F7;}
+.widget_search input{ display: table-cell;}
+.widget_search .search-input{width:206px;padding:7px 6px 7px;border-color:#f0f0f0; background-color: #f0f0f0;}
 .widget_search .search-form{margin:0;}
 .widget_search .search-submit{padding:8px 32px;}
 
 
 .top-search{ display: none;}
-.search-form{float:left;margin:0 5px 0 0}
+.search-form{float:left;margin:0 5px 0 0;}
+.search-form input{font-size:14px;}
 .search-submit{float:left}
 
-input.search-input{float:left;color:#bbb;border:solid 1px #F7F7F7;width:160px; background-color: #F7F7F7;}
+input.search-input{float:left;color:#bbb;border:solid 1px #7B37AD;width:160px; background-color: #fff;}
 input.search-input:hover,
 input.search-input:focus{color:#444;border-color:#8E60BA}
 
@@ -493,4 +494,6 @@ input.search-input:focus{color:#444;border-color:#8E60BA}
 .search-suggest span{float:right;color:#999}
 .search-suggest .active span{color:#fff}
 
+
+.bdsharebuttonbox { background-color: #ff0;width:100%;height:50px;}
 

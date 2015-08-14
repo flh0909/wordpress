@@ -5,40 +5,13 @@
 +(function($){
     $(document).ready(function(){
 
-        if( $('.bdsharebuttonbox').length ){
+        if( jiathis_config ){
             if( $('.article-content').length ) $('.article-content img').attr('data-tag', 'bdshare')
 
 
-            window._bd_share_config={
-                "common":{
-                    "bdSnsKey":{
-                        "tqq":_deel.appkey.tqq || null,
-                        "tsina":_deel.appkey.tsina || null,
-                        "t163":_deel.appkey.t163 || null,
-                        "tsohu":_deel.appkey.tsohu || null,
-                    },
-                    "bdText":"",
-                    "bdMini":"2",
-                    "bdMiniList":false,
-                    "bdPic":"",
-                    "bdStyle":"1",
-                    "bdSize":"16"
-                },
-                "share":{},
-                "image":{
-                    tag: 'bdshare',
-                    "viewList":["tsina","weixin","tqq","qzone"],
-                    "viewText":" ",
-                    "viewSize":"16"
-                }/*,
-                 "selectShare":{
-                 "bdContainerClass":'article-content',
-                 "bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]
-                 }*/
-            };
+            with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://v3.jiathis.com/code/jia.js?uid=1589466'];
 
 
-            with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         }
 
 

@@ -262,13 +262,26 @@ add_action('login_head', 'custom_login');   */
 
 
 function deel_share(){
-  echo '<div class="share"><h5>分享到 </h5><div class="bdsharebuttonbox">
-<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-<a href="#" class="bds_more" data-cmd="more"></a>
-<a class="bds_count" data-cmd="count"></a></div></div>';
+  echo '<div class="share"><h5>分享</h5>
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32">
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_weixin"></a>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_cqq"></a>
+<a href="http://www.jiathis.com/share?uid=1589466" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	data_track_clickback:true,
+	summary:"",
+	shortUrl:false,
+	hideMore:false
+}
+</script>
+<!-- JiaThis Button END -->
+</div>';
 }
 
 function deel_avatar_default(){
