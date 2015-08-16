@@ -5,7 +5,7 @@
 +(function($){
     $(document).ready(function(){
 
-        if( jiathis_config ){
+        if(typeof jiathis_config != undefined){
             if( $('.article-content').length ) $('.article-content img').attr('data-tag', 'bdshare')
 
 

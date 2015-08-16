@@ -61,7 +61,7 @@
 .excerpt header .label{margin-right:5px;position:relative;top:-2px}
 
 .excerpt h2{display:inline;font-size:20px;margin:0;font-weight:normal;position:relative;top:1px;line-height:25px}
-.excerpt h2 a{color:#8e60bb}
+.excerpt h2 a{color:#333}
 .excerpt h2 a:hover{color:#7B37AD}
 .excerpt h2 strong{color:#8CAC52;margin-right:10px}
 .excerpt .note{color:#999;font-size: 14px;line-height: 24px;}
