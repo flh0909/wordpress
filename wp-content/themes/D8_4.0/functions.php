@@ -542,6 +542,7 @@ function myoption_siteurl() {
 add_filter('pre_option_siteurl','myoption_siteurl');
 add_filter('pre_option_home','myoption_siteurl');
 
+// 编辑器按钮
 function add_editor_buttons($buttons) {
 	$buttons[] = 'fontselect';
 	$buttons[] = 'fontsizeselect';
@@ -563,9 +564,17 @@ function add_editor_buttons($buttons) {
 }
 add_filter("mce_buttons_3", "add_editor_buttons");
 
+// 字体大小自定义
 function customize_text_sizes($initArray){
 	$initArray['fontsize_formats'] = "12px 13px 14px 15px 16px 18px 20px 22px 24px 26px 28px 30px 32px 34px 36px 38px 42px 44px 46px 48px";
 	return $initArray;
 }
 add_filter('tiny_mce_before_init', 'customize_text_sizes');
+
+function upload_rename($file){
+	$time=date_timestamp_get();
+	$file['name'] = $time."".mt_rand(1,100).".".pathinfo($file['name'] , PATHINFO_EXTENSION);
+	return $file;
+}
+add_filter('wp_handle_upload_prefilter', 'upload_rename');
 ?>
