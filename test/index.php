@@ -11,6 +11,7 @@ date_default_timezone_set('Asia/Shanghai');
 echo date('Ymd_His_').rand(100,999).'<br/>'.microtime();
 
 
+echo 'test';
 
 echo date("Y-m-d H:i:s");
 
