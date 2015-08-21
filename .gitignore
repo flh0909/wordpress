@@ -19,3 +19,4 @@ node_modules/
 tmp/
 build/
 wp-config/
+wp-content/uploads/
