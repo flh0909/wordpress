@@ -25,7 +25,7 @@
             name: '<?php bloginfo('name') ?>',
             url: '<?php echo get_bloginfo("template_url") ?>',
             rss: '<?php echo dopt('d_rss') ?>',
-            ajaxpager: '<?php echo dopt('d_ajaxpager_b') ?>',
+            ajaxpager: '<?php echo dopt('d_ajaxpager_b') && wp_is_mobile() ?"on":"" ?>',
             maillist: '<?php echo dopt('d_maillist_b') ?>',
             maillistCode: '<?php echo dopt('d_maillist') ?>',
             commenton: <?php echo $commenton ?>,

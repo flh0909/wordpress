@@ -153,6 +153,8 @@
 @media (max-width:640px){
     input.search-input{width: 330px;}
 
+    /*.paged .week-wrapper{ display: none;}*/
+
     .rollto{bottom: 70px;right: 2px;}
 
     .excerpt, .excerpt:hover{padding: 12px 20px;border-left: none;}

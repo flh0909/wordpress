@@ -40,6 +40,7 @@
                 trigger: '下一页',
                 onPageChange: function(pageNum, pageUrl, scrollOffset) {
                     window._gaq && window._gaq.push(['_trackPageview', jQuery('<a/>').attr('href',pageUrl)[0].pathname.replace(/^[^\/]/,'/')]);
+                    window._hmt && window._hmt.push(['_trackPageview', pageUrl]);
                 }
             });
         }
@@ -87,11 +88,13 @@
                 })
             }
 
-            $(window).scroll(function(){
-                var scroller = $('.rollto');
-                document.documentElement.scrollTop+document.body.scrollTop>200?scroller.fadeIn():scroller.fadeOut();
-            })
+
         }
+
+        $(window).scroll(function(){
+            var scroller = $('.rollto');
+            document.documentElement.scrollTop+document.body.scrollTop>200?scroller.fadeIn():scroller.fadeOut();
+        });
 
         /* nav for tablet and phone
          * ====================================================

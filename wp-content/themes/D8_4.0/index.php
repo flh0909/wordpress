@@ -6,10 +6,13 @@
             <?php
             if( $paged && $paged > 1 ){}else{
                  //if (dopt('d_sticky_b')) include 'modules/sticky.php';
+
                 include 'modules/recommend.php';
             ?>
             <?php }?>
 
+            <?php if($paged && $paged > 1 && wp_is_mobile()){}else{ ?>
+            <div class="week-wrapper">
             <h2 class="title">本周热门</h2>
             <?php
                 $hot_ids=array();
@@ -45,8 +48,8 @@
                 <?php endwhile;
                 wp_reset_query(); ?>
             </ul>
-
-
+            </div>
+            <?php }?>
 
 
 
@@ -64,11 +67,14 @@
             printf('<h2 class="title">最新发布</h2>');
             }
 
+
+
+
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = array(
                 'ignore_sticky_posts' => 1,
                  //'orderby'=>'comment_count',
-                'posts_per_page'=>10,
+                'posts_per_page'=>dopt('posts_per_page'),
                 'paged' => $paged//,
                 //'post__not_in' => array_merge(get_option('sticky_posts'),$hot_ids)
             );

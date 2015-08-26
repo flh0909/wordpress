@@ -1,3 +1,5 @@
+<?php if(!wp_is_mobile()){?>
+
 <aside class="sidebar">
 	<div class="widget widget_search clear">
 	<form method="get" class="dropdown search-form" action="<?php echo esc_url(home_url('/')); ?>">
@@ -24,3 +26,4 @@ else {
 }
 ?>
 </aside>
+<?php }?>
