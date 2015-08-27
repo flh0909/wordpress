@@ -30,6 +30,10 @@
 include(dirname(__FILE__) . '/wp-config/mysql.php');
 
 /** 创建数据表时默认的文字编码 */
+define('WP_CACHE', true); //Added by WP-Cache Manager
+
+define( 'WPCACHEHOME', 'E:\php\wp\wp-content\plugins\wp-super-cache/' ); //Added by WP-Cache Manager
+
 define('DB_CHARSET', 'utf8');
 
 /** 数据库整理类型。如不确定请勿更改 */

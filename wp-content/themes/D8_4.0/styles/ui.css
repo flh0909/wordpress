@@ -40,10 +40,10 @@
 .sticky2 .slider-prev,.sticky2 .slider-next{position:absolute;top:50%;right:5px;margin-top:-12px;background-color:#e6e6e6;color:#aaa;padding:2px 7px}
 .sticky2 .slider-prev{right:29px}
 .sticky2 .slider-prev:hover,.sticky2 .slider-next:hover{background-color:#4a4a4a;color:#fff}
-.excerpt{background-color:#fff;padding:20px 20px 20px 256px;margin-bottom:1px;position:relative;border-left:solid 4px #fff;*zoom:1}
+.excerpt{background-color:#fff;padding:20px 20px 20px 256px;margin-bottom:1px;position:relative;border-left:solid 2px #fff;*zoom:1}
 .excerpt:before,.excerpt:after{display:table;content:"";line-height:0}
 .excerpt:after{clear:both}
-.excerpt:hover{border-left-color:#8e60bb;padding-left:260px;margin-left:-4px;background-color: #FBF5FF; }
+.excerpt:hover{border-left-color:#8e60bb;padding-left:258px;margin-left:-2px;background-color: #F7F7F7; }
 .excerpt-nothumbnail{padding-left: 20px;}
 .excerpt-nothumbnail:hover{padding-left: 24px;}
 .excerpt header{margin:0 0 15px 0;}
