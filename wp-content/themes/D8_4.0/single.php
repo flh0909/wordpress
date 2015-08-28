@@ -8,7 +8,10 @@
 			<div class="meta">
 
 				<time class="muted"><i class="ico icon-time icon12"></i> <?php echo get_the_time('Y-m-d G:i:s')?></time>
-				<span class="muted"><i class="ico icon-eye-open icon12"></i> <?php deel_views('浏览'); ?></span>
+				<span class="muted"><i class="ico icon-eye-open icon12"></i>
+	<span id="j_post_views"><?php if(!is_user_logged_in()){ echo "0 浏览"; }else{deel_views('浏览');} ?>	</span>
+		</span>
+
 				<?php if ( comments_open() ) echo '<span class="muted"><i class="icon-comment icon12"></i> <a href="'.get_comments_link().'">'.get_comments_number('0', '1', '%').'评论</a></span>'; ?>
 				<?php edit_post_link('[编辑]'); ?>
 			</div>

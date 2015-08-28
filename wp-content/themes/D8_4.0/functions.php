@@ -206,8 +206,10 @@ function deel_record_visitors(){
 	  }
 	}
 }
-add_action('wp_head', 'deel_record_visitors');
-
+if(is_user_logged_in()) {
+	// 针对 wp-super-cache
+	add_action('wp_head', 'deel_record_visitors');
+}
 function deel_views($after=''){
   global $post;
   $post_ID = $post->ID;
