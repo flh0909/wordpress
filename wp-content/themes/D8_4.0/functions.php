@@ -579,4 +579,9 @@ function upload_rename($file){
 	return $file;
 }
 add_filter('wp_handle_upload_prefilter', 'upload_rename');
+
+
+add_theme_support( 'post-formats', array( 'aside', 'chat','gallery','image','link', 'quote', 'status', 'video', 'audio' ) );
+
+
 ?>

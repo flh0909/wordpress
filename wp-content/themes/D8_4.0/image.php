@@ -3,88 +3,80 @@
 	<div class="content">
 
 		<?php while ( have_posts() ) : the_post(); ?>
+			<?php
+			/**
+			 * Grab the IDs of all the image attachments in a gallery so we can get the URL of the next adjacent image in a gallery,
+			 * or the first image (if we're looking at the last image in a gallery), or, in a gallery of one, just the link to that image file
+			 */
+			$attachments = array_values( get_children( array( 'post_parent' => $post->post_parent, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'menu_order ID' ) ) );
+			$index=1;
+			foreach ( $attachments as $k => $attachment ) :
+				if ( $attachment->ID == $post->ID )
+					break;
+				$index++;
+			endforeach;
+			?>
+			<header class="article-header">
+				<h1 class="article-title"><a href="<?php echo esc_url( get_permalink( $post->post_parent ) ) ?>"><?php echo get_the_title( $post->post_parent ); ?></a> (<?php echo $index.'/'.count($attachments)?>)</h1>
+				<div class="meta">
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class( 'image-attachment' ); ?>>
-					<header class="entry-header">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
+					<time class="muted"><i class="ico icon-time icon12"></i> <?php echo get_the_time('Y-m-d G:i:s')?></time>
+				<span class="muted"><i class="ico icon-eye-open icon12"></i>
+	<span id="j_post_views"><?php if(!is_user_logged_in()){ echo "0 浏览"; }else{deel_views('浏览');} ?>	</span>
+		</span>
 
-						<footer class="entry-meta">
-							<?php
-								$metadata = wp_get_attachment_metadata();
-								printf( __( '<span class="meta-prep meta-prep-entry-date">Published </span> <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>.', 'twentytwelve' ),
-									esc_attr( get_the_date( 'c' ) ),
-									esc_html( get_the_date() ),
-									esc_url( wp_get_attachment_url() ),
-									$metadata['width'],
-									$metadata['height'],
-									esc_url( get_permalink( $post->post_parent ) ),
-									esc_attr( strip_tags( get_the_title( $post->post_parent ) ) ),
-									get_the_title( $post->post_parent )
-								);
-							?>
-							<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
-						</footer><!-- .entry-meta -->
+					<?php if ( comments_open() ) echo '<span class="muted"><i class="icon-comment icon12"></i> <a href="'.get_comments_link().'">'.get_comments_number('0', '1', '%').'评论</a></span>'; ?>
+					<?php edit_post_link('[编辑]'); ?>
+				</div>
+				<?php deel_share(); ?>
+			</header>
 
-						<nav id="image-navigation" class="navigation" role="navigation">
-							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous', 'twentytwelve' ) ); ?></span>
-							<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;', 'twentytwelve' ) ); ?></span>
-						</nav><!-- #image-navigation -->
-					</header><!-- .entry-header -->
+			<article class="article-content article-content-image">
+				<div class="attachment">
+					<?php
 
-					<div class="entry-content">
 
-						<div class="entry-attachment">
-							<div class="attachment">
-<?php
-/**
- * Grab the IDs of all the image attachments in a gallery so we can get the URL of the next adjacent image in a gallery,
- * or the first image (if we're looking at the last image in a gallery), or, in a gallery of one, just the link to that image file
- */
-$attachments = array_values( get_children( array( 'post_parent' => $post->post_parent, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'menu_order ID' ) ) );
-foreach ( $attachments as $k => $attachment ) :
-	if ( $attachment->ID == $post->ID )
-		break;
-endforeach;
+					$k++;
+					// If there is more than 1 attachment in a gallery
+					if ( count( $attachments ) > 1 ) :
+						if ( isset( $attachments[ $k ] ) ) :
+							// get the URL of the next image attachment
+							$next_attachment_url = get_attachment_link( $attachments[ $k ]->ID );
+						else :
+							// or get the URL of the first image attachment
+							$next_attachment_url = get_permalink( $post->post_parent );
+						endif;
+					else :
+						// or, if there's only 1 image, get the URL of the image
+						$next_attachment_url = get_permalink( $post->post_parent );
+					endif;
+					?>
+					<a href="<?php echo esc_url( $next_attachment_url ); ?>" title="<?php the_title_attribute(); ?>" rel="attachment"><?php
+						$attachment_size = apply_filters( 'twentytwelve_attachment_size', array( 960, 960 ) );
+						echo wp_get_attachment_image( $post->ID, $attachment_size );
+						?></a>
 
-$k++;
-// If there is more than 1 attachment in a gallery
-if ( count( $attachments ) > 1 ) :
-	if ( isset( $attachments[ $k ] ) ) :
-		// get the URL of the next image attachment
-		$next_attachment_url = get_attachment_link( $attachments[ $k ]->ID );
-	else :
-		// or get the URL of the first image attachment
-		$next_attachment_url = get_attachment_link( $attachments[ 0 ]->ID );
-	endif;
-else :
-	// or, if there's only 1 image, get the URL of the image
-	$next_attachment_url = wp_get_attachment_url();
-endif;
-?>
-								<a href="<?php echo esc_url( $next_attachment_url ); ?>" title="<?php the_title_attribute(); ?>" rel="attachment"><?php
-								$attachment_size = apply_filters( 'twentytwelve_attachment_size', array( 960, 960 ) );
-								echo wp_get_attachment_image( $post->ID, $attachment_size );
-								?></a>
+					<?php if ( ! empty( $post->post_excerpt ) ) : ?>
+						<div class="entry-caption">
+							<?php the_excerpt(); ?>
+						</div>
+					<?php endif; ?>
+				</div><!-- .attachment -->
+			</article>
+			<nav id="image-navigation" class="article-navigation" role="navigation">
+				<?php if($index>2){?>
+				<span class="previous-image"><a href="<?php get_attachment_link( $attachments[ $index-2 ]->ID )?>">&larr; 上一张</a></span>
+				<?php }?>
 
-								<?php if ( ! empty( $post->post_excerpt ) ) : ?>
-								<div class="entry-caption">
-									<?php the_excerpt(); ?>
-								</div>
-								<?php endif; ?>
-							</div><!-- .attachment -->
+				<span class="next-image"><a href="<?php echo esc_url( $next_attachment_url ); ?>">下一张 &rarr;</a></span>
+			</nav><!-- #image-navigation -->
 
-						</div><!-- .entry-attachment -->
+			<div class="article-content">
+				<?php the_content(); ?>
+			</div>
 
-						<div class="entry-description">
-							<?php the_content(); ?>
-							<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
-						</div><!-- .entry-description -->
 
-					</div><!-- .entry-content -->
 
-				</article><!-- #post -->
-
-				<?php comments_template(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 

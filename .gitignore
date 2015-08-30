@@ -21,3 +21,4 @@ build/
 wp-config/
 wp-content/uploads/
 wp-content/cache/
+wp-config.php
