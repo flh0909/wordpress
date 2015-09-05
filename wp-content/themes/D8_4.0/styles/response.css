@@ -222,6 +222,9 @@
 
     .article-nav{display: none;}
 
+    .article-content .image-gallery li,
+    .article-content .image-gallery li img{width:125px;height:125px;}
+
 }
 @media (max-width:360px){
     .navbar{margin-bottom: 0;}
