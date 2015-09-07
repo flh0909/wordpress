@@ -457,7 +457,9 @@ function deel_copyright($content) {
 		if( $show ){
 			$content.= '<p>来源：'.$show.'</p>';
 		}
-		$content.= '<p>转载请注明：<a href="'.get_bloginfo('url').'">'.get_bloginfo('name').'</a> - '.get_bloginfo('url').'</p>';
+
+
+		$content.= '<p>转载请注明：<a href="'.get_bloginfo('url').'">'.get_bloginfo('name').'</a> - '.get_permalink().'</p>';
 	}
 	return $content;
 }
@@ -581,7 +583,7 @@ function upload_rename($file){
 add_filter('wp_handle_upload_prefilter', 'upload_rename');
 
 
-add_theme_support( 'post-formats', array( 'aside', 'chat','gallery','image','link', 'quote', 'status', 'video', 'audio' ) );
+//add_theme_support( 'post-formats', array( 'aside', 'chat','gallery','image','link', 'quote', 'status', 'video', 'audio' ) );
 
 
 function gallery_template( $original_template ){
