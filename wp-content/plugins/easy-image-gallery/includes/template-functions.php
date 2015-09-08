@@ -313,7 +313,7 @@ function easy_image_gallery() {
 
 		ob_start();
 ?>
-
+	<h2 style="border-top:solid 1px #eee;border-bottom:solid 1px #eee;">记事配图 <?php echo count($attachment_ids)?> 张，点击放大</h2>
     <ul class="image-gallery clear <?php echo $classes; ?>">
     <?php
 		foreach ( $attachment_ids as $attachment_id ) {
