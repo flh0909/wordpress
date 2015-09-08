@@ -12,6 +12,18 @@
             with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://v3.jiathis.com/code/jia.js?uid=1589466'];
 
 
+            var _width=$(window).width();
+            if(_width<510){
+                _width=$(window).width();
+                $(window).resize(function () {
+                    $('.article-content iframe').each(function () {
+                        var _w=$(this).width(),_h=$(this).height();
+                        $(this).width(_width-20);
+                        $(this).height((_width-20)*_h/_w);
+                    })
+                }).resize();
+            }
+
         }
 
 
