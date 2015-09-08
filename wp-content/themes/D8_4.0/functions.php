@@ -457,7 +457,9 @@ function deel_copyright($content) {
 		if( $show ){
 			$content.= '<p>来源：'.$show.'</p>';
 		}
-		$content.= '<p>转载请注明：<a href="'.get_bloginfo('url').'">'.get_bloginfo('name').'</a> - '.get_bloginfo('url').'</p>';
+
+
+		$content.= '<p>转载请注明：<a href="'.get_bloginfo('url').'">'.get_bloginfo('name').'</a> - '.get_permalink().'</p>';
 	}
 	return $content;
 }
@@ -581,7 +583,58 @@ function upload_rename($file){
 add_filter('wp_handle_upload_prefilter', 'upload_rename');
 
 
-add_theme_support( 'post-formats', array( 'aside', 'chat','gallery','image','link', 'quote', 'status', 'video', 'audio' ) );
+//add_theme_support( 'post-formats', array( 'aside', 'chat','gallery','image','link', 'quote', 'status', 'video', 'audio' ) );
 
 
+function gallery_template( $original_template ){
+	global $wp_query;
+	$wp_query->is_404 = false;
+	if($_GET['gid'] && $_GET['aid'] && $original_template =get_query_template('image') /*get_attachment_template()*/){
+	add_filter('wp_title','gallery_title');
+	}
+
+
+	return $original_template;
+}
+add_filter( 'template_include', 'gallery_template' );
+
+
+function gallery_title($title, $sep, $seplocation ){
+	if($_GET['gid'] && $_GET['aid']){
+		return (get_post($_GET['gid'])->post_title)." - ".$title;
+	}
+}
+/*
+function custom_rewrite_tag() {
+	add_rewrite_tag('%gallery_post_id%', '([^&]+)');
+	add_rewrite_tag('%gallery_id%', '([^&]+)');
+}
+add_action('init', 'custom_rewrite_tag', 10, 0);
+
+function add_rewrite_rules($aRules) {
+//	$aNewRules = array('gallery/(\\d+)/([^/]+)$' => 'index.php?gallery_post_id=$matches[1]&gallery_id=$matches[2]',
+//		'gallery/([0-9]+)/([0-9]+)$' => 'index.php?gallery_post_id=1111111'
+//		);
+	add_rewrite_rule('^gallery/([^/]*)/([^/]*)/?',
+		'index.php?page_id=12&gallery_post_id=$matches[1]&gallery_id=$matches[2]','top');
+
+}
+
+// hook add_rewrite_rules function into rewrite_rules_array
+add_action('init', 'custom_rewrite_rule', 10, 0);
+
+
+function gallery_template( $original_template ) {
+	return get_query_template('image');
+	global $wp_query;
+	global $wp_rewrite;
+	$gallery_post_id=isset($wp_query->query_vars['gallery_post_id'])?($wp_query->query_vars['gallery_post_id']):'';
+	if ($gallery_post_id) {
+		return get_query_template('image');
+	} else {
+		return $original_template;
+	}
+}
+add_filter( 'template_include', 'gallery_template' );
+*/
 ?>

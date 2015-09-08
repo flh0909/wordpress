@@ -63,7 +63,7 @@
         /* components
          * ====================================================
          */
-        if( $('.article-content').length ) $('.article-content a').tooltip({container: 'body'})
+        //if( $('.article-content').length ) $('.article-content a').tooltip({container: 'body'})
 
         if( $('.d_reader').length ) $('.d_reader a').tooltip({container: 'body'})
 

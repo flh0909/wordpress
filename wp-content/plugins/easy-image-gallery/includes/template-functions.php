@@ -169,7 +169,7 @@ function easy_image_gallery_get_post_types() {
  * @since 1.0
 */
 function easy_image_gallery_allowed_post_types() {
-	
+
 	$defaults['post_types']['post'] = 'on';
 	$defaults['post_types']['page'] = 'on';
 
@@ -314,7 +314,7 @@ function easy_image_gallery() {
 		ob_start();
 ?>
 
-    <ul class="image-gallery <?php echo $classes; ?>">
+    <ul class="image-gallery clear <?php echo $classes; ?>">
     <?php
 		foreach ( $attachment_ids as $attachment_id ) {
 
@@ -322,7 +322,7 @@ function easy_image_gallery() {
 
 			// get original image
 			$image_link	= wp_get_attachment_image_src( $attachment_id, apply_filters( 'easy_image_gallery_linked_image_size', 'large' ) );
-			$image_link	= $image_link[0];	
+			$image_link	= $image_link[0];
 
 			$image = wp_get_attachment_image( $attachment_id, apply_filters( 'easy_image_gallery_thumbnail_image_size', 'thumbnail' ), '', array( 'alt' => trim( strip_tags( get_post_meta( $attachment_id, '_wp_attachment_image_alt', true ) ) ) ) );
 
@@ -336,7 +336,10 @@ function easy_image_gallery() {
 
 			if ( easy_image_gallery_has_linked_images() )
 				//$html = sprintf( '<li><a %s href="%s" class="%s" title="%s"><i class="icon-view"></i><span class="overlay"></span>%s</a></li>', $rel, $image_link, $image_class, $image_caption, $image );
-				$html = sprintf( '<li><a %s href="%s" class="%s" title="%s"><i class="icon-view"></i><span class="overlay"></span>%s</a></li>', '',  get_attachment_link($attachment_id), $image_class, $image_caption, $image );
+				$html = sprintf( '<li><a %s href="%s" class="%s" title="%s"><i class="icon-view"></i><span class="overlay"></span>%s</a></li>', '', '/?gid='.$post->ID.'&aid='.$attachment_id ,$image_class, $image_caption, $image );
+				//get_attachment_link($attachment_id)
+			// '/gallery/'.$post->ID.'/'.$attachment_id
+			//
 			else
 				$html = sprintf( '<li>%s</li>', $image );
 
