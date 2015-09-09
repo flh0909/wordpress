@@ -63,16 +63,20 @@
 					?>
 					<a href="<?php echo ( $next_attachment_url ); ?>" title="<?php the_title_attribute(); ?>" rel="attachment"><?php
 						$attachment_size = apply_filters( 'twentytwelve_attachment_size', array( 960, 960 ) );
-						echo wp_get_attachment_image( $aid, $attachment_size );
+						echo remove_width_height(wp_get_attachment_image( $aid, $attachment_size ));
 						?></a>
 
-					<?php if ( ! empty( $post->post_excerpt ) ) : ?>
-						<div class="entry-caption">
-							<?php the_excerpt(); ?>
-						</div>
-					<?php endif; ?>
+
+
 				</div><!-- .attachment -->
 			</article>
+
+
+			<article class="article-content">
+
+<?php echo remove_width_height(get_post($_GET['aid'])->post_content)?>
+			</article>
+
 			<nav id="image-navigation" class="article-navigation" role="navigation">
 				<?php if($index>1){?>
 				<span class="previous-image"><a href="/?gid=<?php echo $gid.'&aid='.$attachments[ $index -2]?>">&larr; 上一张</a></span>

@@ -29,8 +29,22 @@ echo "<br/>";
 
 echo 'aaaaa';
 
+$string = 'April 15, 2003';
+$pattern = '/(\w+) (\d+), (\d+)/i';
+$replacement = '${1}1,$3';
+echo preg_replace($pattern, $replacement, $string);
 
 
+$str='<p height="22" align="cenetr" style="float:left;height:30px;">111 22</p>
+<img src="http://fileaaa.jpg" width="100" alt="aaa" />
+<div style="float:left;height:30px;">中国人</div>';
 
-echo "test";
+
+$exp=Array("/height=.{0,5}\s/i","/width=.{0,5}\s/i");
+
+$exp_o=Array('','');
+
+echo preg_replace($exp,$exp_o,$str);
+
+
 

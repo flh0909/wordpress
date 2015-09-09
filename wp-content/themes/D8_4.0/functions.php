@@ -461,7 +461,19 @@ function deel_copyright($content) {
 
 		$content.= '<p>转载请注明：<a href="'.get_bloginfo('url').'">'.get_bloginfo('name').'</a> - '.get_permalink().'</p>';
 	}
-	return $content;
+
+
+
+	return remove_width_height($content);
+
+
+}
+
+function remove_width_height($str){
+	$exp=Array("/height=.{0,5}\s/i","/width=.{0,5}\s/i");
+
+	$exp_o=Array('','');
+    return preg_replace($exp,$exp_o,$str);
 }
 
 //时间显示方式‘xx以前’
