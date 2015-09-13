@@ -142,7 +142,7 @@
 .article-tags a:nth-child(5n+4){background-color: #F0AD4E;}
 
 .article-content-image{ text-align: center;}
-.article-navigation{background-color: #fff;padding:10px; text-align: center;}
+.article-navigation{background-color: #fff;padding:10px 0 30px; text-align: center;}
 .article-navigation a{ display: inline-block; text-align: center;padding:4px 15px; font-size: 14px; color: #fff; background-color: #8e60bb;}
 .article-navigation a:hover{ background-color: #7B37AD;}
 

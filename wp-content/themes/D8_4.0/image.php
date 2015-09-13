@@ -28,7 +28,7 @@
 			endforeach;
 			?>
 			<header class="article-header">
-				<h1 class="article-title"><a href="/?gid=<?php echo $gid.'&aid='.$aid?>"><?php echo get_the_title( $gid ); ?></a> (<?php echo $index.'/'.count($attachments)?>)</h1>
+				<h1 class="article-title"><a href="/archives/<?php echo $gid?>"><?php echo get_the_title( $gid ); ?></a> (<?php echo $index.'/'.count($attachments)?>)</h1>
 				<!--<div class="meta">
 
 					<time class="muted"><i class="ico icon-time icon12"></i> <?php /*echo get_the_time('Y-m-d G:i:s')*/?></time>
@@ -75,6 +75,9 @@
 			<article class="article-content">
 
 <?php echo remove_width_height(get_post($_GET['aid'])->post_content)?>
+
+				<p style="text-align: right;"><a href="/archives/<?php echo $gid?>">返回原文</a></p>
+
 			</article>
 
 			<nav id="image-navigation" class="article-navigation" role="navigation">
