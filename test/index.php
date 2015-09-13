@@ -39,12 +39,21 @@ $str='<p height="22" align="cenetr" style="float:left;height:30px;">111 22</p>
 <img src="http://fileaaa.jpg" width="100" alt="aaa" />
 <div style="float:left;height:30px;">中国人</div>';
 
+/*PHP正则提取图片img标记中的任意属性*/
+$str = '<div style="margin: 0px auto; width: 740px;"> <p><img width="748" height="444" alt="" src="/images/upload/Image/manmiao_0001.jpg" /></p></div><iframe width="212" height="232"></iframe>';
+//去掉图片宽度
+/*$search = '/(<img.*?)width=(["\'])?.*?(?(2)\2|\s)([^>]+>)/is';
+//去掉图片高度
+$search1 = '/(<img.*?)height=(["\'])?.*?(?(2)\2|\s)([^>]+>)/is';
+$content = preg_replace($search,'$1$3',$str);
+$content = preg_replace($search1,'$1$3',$content);*/
+//去掉div的style
+$str = preg_replace("/style=.+?['|\"]/i",'',$str);//这种方式很简单易懂，但因为太简单，不知道有没有漏洞，否则去掉图片的宽高也用这种方法写了
 
-$exp=Array("/height=.{0,5}\s/i","/width=.{0,5}\s/i");
+$exp=Array('/(<img.*?)width=(["\'])?.*?(?(2)\2|\s)([^>]+>)/is','/(<img.*?)height=(["\'])?.*?(?(2)\2|\s)([^>]+>)/is');
+$content =preg_replace($exp,'$1$3',$str);
 
-$exp_o=Array('','');
-
-echo preg_replace($exp,$exp_o,$str);
+highlight_string($content);
 
 
 

@@ -1,4 +1,4 @@
-<ul class="week-hot week-hot-about clear">
+<ul class="article-related clear">
 <?php  
 $exclude_id = $post->ID; 
 $posttags = get_the_tags(); 
@@ -19,7 +19,7 @@ if ( $posttags ) {
 		<li>
 			<div>
 				<a href="<?php the_permalink(); ?>" class="thumbnail"><?php deel_thumbnail(); ?></a>
-				<a href="<?php the_permalink() ?>" class="week-hot-title" title="<?php the_title(); ?> - <?php bloginfo('name'); ?>"><?php the_title(); ?></a>
+				<a href="<?php the_permalink() ?>" class="article-related-title" title="<?php the_title(); ?> - <?php bloginfo('name'); ?>"><?php the_title(); ?></a>
 
 				<p>
 					<span class="muted"><i class="icon-eye-open icon12"></i> <?php deel_views('浏览'); ?></span>
@@ -49,7 +49,7 @@ if ( $i < $limit ) {
 		<li>
 			<div>
 				<a href="<?php the_permalink(); ?>" class="thumbnail"><?php deel_thumbnail(); ?></a>
-				<a href="<?php the_permalink() ?>" class="week-hot-title" title="<?php the_title(); ?> - <?php bloginfo('name'); ?>"><?php the_title(); ?></a>
+				<a href="<?php the_permalink() ?>" class="article-related-title" title="<?php the_title(); ?> - <?php bloginfo('name'); ?>"><?php the_title(); ?></a>
 
 				<p>
 					<span class="muted"><i class="icon-eye-open icon12"></i> <?php deel_views('浏览'); ?></span>

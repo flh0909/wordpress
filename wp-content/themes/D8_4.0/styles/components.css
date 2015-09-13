@@ -233,7 +233,7 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .ias_trigger a{background-color: #5CB85C;display: block;line-height: 35px;text-align: center;font-size: 14px;color: #eee;}
 .ias_trigger a:hover{background-color: #4CAE4C;color: #fff;}
 
-.pagination-loading{font-size: 14px;text-align: center;color: #666;line-height: 39px;}
+.pagination-loading{font-size: 14px;text-align: center;color: #8e60bb;line-height: 39px;}
 
 .pagenav{overflow:hidden;text-align:center;padding:20px}
 .pagenav a,.pagenav .current,.pagenav .page-numbers{padding:4px 12px 3px;color:#666;display:inline-block;background-color:#eee;margin:0 1px}

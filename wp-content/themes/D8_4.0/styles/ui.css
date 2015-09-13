@@ -464,7 +464,14 @@ pre.prettyprint.linenums ol li {
 .week-hot .thumbnail img{width:220px;height:150px;}
 .week-hot-title{font-size:14px; line-height: 20px;height:40px; overflow: hidden; display: inline-block; padding-top: 10px;}
 
-.week-hot-about{margin-bottom:0;}
+.article-related{ background-color: #fff;padding:0 10px;}
+.article-related li{float:left;width:33.333333%; text-align: center;margin:10px auto;}
+.article-related li div{width:220px;margin:0 auto; text-align: left;padding:10px; }
+.article-related li:hover div{ background-color: #FBF5FF;}
+.article-related li p{margin:0;}
+.article-related .thumbnail{}
+.article-related .thumbnail img{width:220px;height:150px;}
+.article-related-title{font-size:14px; line-height: 20px;height:40px; overflow: hidden; display: inline-block; padding-top: 10px;}
 
 /*今日推荐*/
 .recommend{background-color: #fff;padding:20px 0 20px 350px; margin-bottom: 10px;}
